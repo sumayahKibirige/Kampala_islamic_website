@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kampala Islamic Secondary School | Always Aim Higher</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Literata:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@500&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#1a4731",
+          "primary-dark": "#0d2b1d",
+          "primary-light": "#2d6b4a",
+          "gold": "#c9a84c",
+          "gold-light": "#e8c96a",
+          "navy": "#0f2744",
+          "navy-mid": "#1b3d6b",
+          "on-primary": "#ffffff",
+          "surface": "#f7f9f7",
+          "surface-container": "#eef2ee",
+          "surface-container-low": "#f2f6f2",
+          "surface-container-lowest": "#ffffff",
+          "on-surface": "#0d1f12",
+          "on-surface-variant": "#3d4f42",
+          "outline": "#6e7e73",
+          "outline-variant": "#bfcfc3",
+          "primary-fixed": "#e8c96a",
+          "primary-fixed-dim": "#c9a84c",
+          "on-primary-fixed": "#1a1200",
+          "primary-container": "#2d6b4a",
+          "on-primary-container": "#ffffff",
+          "error": "#ba1a1a"
+        },
+        borderRadius: {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        spacing: {
+          "gutter": "24px",
+        },
+        fontFamily: {
+          "headline-lg": ["Literata"],
+          "headline-md": ["Literata"],
+          "display-lg": ["Literata"],
+          "body-lg": ["Hanken Grotesk"],
+          "body-md": ["Hanken Grotesk"],
+          "label-md": ["JetBrains Mono"],
+          "label-sm": ["JetBrains Mono"],
+          "arabic": ["Amiri"],
+        },
+        fontSize: {
+          "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+          "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+          "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+          "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+          "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+          "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+          "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    display: inline-block;
+    line-height: 1;
+  }
+
+  /* Geometric Islamic hexagon pattern */
+  .hex-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='92' viewBox='0 0 80 92' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 4L74 23V61L40 80L6 61V23L40 4Z' fill='none' stroke='%23ffffff' stroke-width='1' stroke-opacity='0.12'/%3E%3Cpath d='M40 16L66 31V61L40 76L14 61V31L40 16Z' fill='none' stroke='%23c9a84c' stroke-width='0.5' stroke-opacity='0.15'/%3E%3C/svg%3E");
+    background-size: 80px 92px;
+  }
+
+  .star-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5L33.5 21L49 15L38 27L54 30L38 33L49 45L33.5 39L30 55L26.5 39L11 45L22 33L6 30L22 27L11 15L26.5 21L30 5Z' fill='%23c9a84c' fill-opacity='0.06'/%3E%3C/svg%3E");
+    background-size: 60px 60px;
+  }
+
+  /* Hero gradient matching template: dark green top-left fading to deep navy bottom-right */
+  .hero-gradient {
+    background: linear-gradient(135deg, #0d2b1d 0%, #1a4731 30%, #1b3d6b 70%, #0f2744 100%);
+  }
+
+  .nav-gradient {
+    background: linear-gradient(90deg, #0d2b1d 0%, #1a4731 100%);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+  }
+
+  /* Bismillah gold glow */
+  .bismillah-text {
+    text-shadow: 0 0 30px rgba(201, 168, 76, 0.4), 0 2px 8px rgba(0,0,0,0.3);
+  }
+
+  /* Star logo */
+  .star-logo::before {
+    content: "★";
+    color: #c9a84c;
+    margin-right: 8px;
+    font-size: 1.2em;
+  }
+
+  .green-section {
+    background: linear-gradient(180deg, #1a4731 0%, #0d2b1d 100%);
+  }
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+
+<!-- ===== TOP NAVIGATION ===== -->
+<!-- <nav class="fixed top-0 w-full z-20 bg-white border-b border-gray-200 shadow-lg transition-all duration-300" id="main-nav"> -->
+  <nav class="fixed top-0 w-full z-50 nav-gradient border-b border-white/10 shadow-lg transition-all duration-300" id="main-nav">
+  <div class="max-w-[1280px] mx-auto px-gutter flex justify-between items-center h-20" id="nav-container">
+    <!-- Logo + Name -->
+    <!-- <div class="flex items-center gap-3">
+
+
+      <div class="w-10 h-10 rounded-full border-2 border-gold flex items-center justify-center">
+    <img src="resources/badge.jpeg" alt="School Badge" class="w-full h-full object-contain" />  
+      </div>
+      <div>
+        <div class="font-headline-md text-white font-bold text-sm leading-tight">Kampala Islamic Secondary School</div>
+        <div class="font-label-sm text-gold-light uppercase tracking-[0.2em] text-[10px]">Always Aim Higher</div>
+      </div>
+    </div> -->
+
+
+    <div class="flex items-center gap-3">
+  <!-- <div class="w-20 h-20 flex items-center justify-center">
+    <img src="resources/badge-removebg-preview.png" alt="School Badge" 
+         class="w-full h-full object-contain mix-blend-mode-multiply" 
+         style="mix-blend-mode: luminosity;" />
+  </div> -->
+
+  <div class="w-16 h-16 flex items-center justify-center rounded-full bg-white p-1">
+  <img src="resources/badge-removebg-preview.png" alt="School Badge" 
+    class="w-full h-full object-contain" />
+</div>
+  <div>
+    <!-- <div class="font-headline-md text-[#1a4731] font-bold text-sm leading-tight">Kampala Islamic Secondary School</div>
+    <div class="font-label-sm text-gold-light uppercase tracking-[0.2em] text-[10px]">Always Aim Higher</div> -->
+
+            <div class="font-headline-md text-white font-bold text-sm leading-tight">Kampala Islamic Secondary School</div>
+        <div class="font-label-sm text-gold-light uppercase tracking-[0.2em] text-[10px]">Always Aim Higher</div>
+  </div>
+</div>
+
+
+
+    <!-- Nav Links -->
+    <div class="hidden md:flex items-center gap-8">
+      <a class="font-label-md text-label-md uppercase tracking-wider text-white border-b-2 border-gold font-bold pb-1"  href="index.html">Home</a>
+      <a class="font-label-md text-label-md uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="about.html">About</a>
+      <a class="font-label-md text-label-md uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="contact.html">Contact</a>
+      <a class="font-label-md text-label-md uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="events.html">Events</a>
+      <!-- <a class="font-label-md text-label-md uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="admissions.html">Admissions</a> -->
+    </div>
+    <!-- CTA Button -->
+    <a class="hidden md:block bg-gold text-on-primary-fixed px-6 py-2.5 rounded-lg font-label-md uppercase tracking-wider hover:bg-gold-light transition-all active:scale-95 shadow-md font-bold" href="admissions.html">
+      Enroll Now
+    </a>
+    <!-- Mobile Menu -->
+    <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div class="hidden md:hidden" id="mobile-menu">
+    <div class="px-gutter py-4 flex flex-col gap-4 bg-primary-dark border-t border-white/10">
+      <a class="font-label-md text-label-md uppercase tracking-wider text-white" href="index.html">Home</a>
+      <a class="font-label-md text-label-md uppercase tracking-wider text-white/70" href="about.html">About Us</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-white/70" href="contact.html">Contact</a>
+
+      <a class="font-label-md text-label-md uppercase tracking-wider text-white/70" href="#">Events</a>
+      <a class="font-label-md text-label-md uppercase tracking-wider text-white/70" href="#">Gallery</a>
+      <button class="bg-gold text-on-primary-fixed px-6 py-2.5 rounded-lg font-label-md uppercase tracking-wider w-full font-bold">Enroll Now</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO SECTION ===== -->
+<header class="relative min-h-screen flex items-center pt-20 overflow-hidden hero-gradient">
+  <!-- Hex Pattern Overlay -->
+  <div class="absolute inset-0 hex-pattern pointer-events-none"></div>
+  <!-- Subtle radial light -->
+  <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse at 60% 40%, rgba(201,168,76,0.08) 0%, transparent 60%)"></div>
+
+  <div class="relative z-10 max-w-[1280px] mx-auto px-gutter w-full py-24">
+    <div class="flex flex-col items-center text-center">
+      <!-- Bismillah -->
+      <div class="font-arabic text-4xl md:text-5xl text-gold bismillah-text mb-6 leading-relaxed" dir="rtl">
+        بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+      </div>
+      <!-- School Name -->
+      <h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-white mb-6 leading-tight max-w-3xl">
+        Kampala Islamic<br/>
+        <span class="text-gold">Secondary School</span>
+      </h1>
+      <p class="font-body-lg text-body-lg text-white/80 max-w-2xl mb-10">
+        Nurturing the next generation through the harmony of faith, academic excellence, and moral integrity — rooted in the heart of Kampala.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <!-- <button class="bg-gold text-on-primary-fixed px-8 py-4 rounded-lg font-label-md uppercase tracking-wider shadow-lg hover:bg-gold-light hover:-translate-y-1 transition-all font-bold">
+          Discover Our Programs
+        </button> -->
+        <a class="border border-white/40 bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-lg font-label-md uppercase tracking-wider hover:bg-white/20 transition-all" href="tour.html">
+          Virtual Tour
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Bar -->
+  <div class="absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-sm border-t border-white/10">
+    <div class="max-w-[1280px] mx-auto px-gutter py-4 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="text-center">
+        <div class="font-display-lg text-gold text-2xl font-bold">1,000+</div>
+        <div class="font-label-sm text-white/60 uppercase tracking-wider text-xs">Students Enrolled</div>
+      </div>
+      <div class="text-center">
+        <div class="font-display-lg text-gold text-2xl font-bold">80+</div>
+        <div class="font-label-sm text-white/60 uppercase tracking-wider text-xs">Qualified Teachers</div>
+      </div>
+      <div class="text-center">
+        <div class="font-display-lg text-gold text-2xl font-bold">30+</div>
+        <div class="font-label-sm text-white/60 uppercase tracking-wider text-xs">Years of Excellence</div>
+      </div>
+      <div class="text-center">
+        <div class="font-display-lg text-gold text-2xl font-bold">95%</div>
+        <div class="font-label-sm text-white/60 uppercase tracking-wider text-xs">UCE Pass Rate</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== PRINCIPAL'S MESSAGE ===== -->
+<section class="py-20 bg-surface">
+  <div class="max-w-[1280px] mx-auto px-gutter grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+    <div class="lg:col-span-5 relative group">
+      <div class="absolute -inset-4 bg-primary/5 rounded-xl -rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
+      <!-- Principal image placeholder with green gradient -->
+      <div class="relative rounded-xl shadow-xl w-full aspect-[4/5] overflow-hidden bg-gradient-to-br from-primary to-navy flex items-center justify-center">
+        <div class="text-center text-white/30">
+          <span class="material-symbols-outlined" style="font-size:80px">person</span>
+          <p class="text-sm mt-2">Principal Photo</p>
+        </div>
+        <div class="absolute inset-0 star-pattern opacity-30"></div>
+      </div>
+      <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-6 rounded-lg border border-primary/10 shadow-xl">
+        <p class="font-headline-md text-headline-md text-primary mb-1">Hajji.Rajab Ssenfuka</p>
+        <p class="font-label-md text-label-md text-outline uppercase tracking-widest">Executive Principal</p>
+      </div>
+    </div>
+    <div class="lg:col-span-7">
+      <span class="text-gold font-label-md uppercase tracking-[0.2em] mb-4 block font-bold">A Welcome Note</span>
+      <h2 class="font-headline-lg text-headline-lg text-primary mb-6">Nurturing Hearts, Expanding Minds</h2>
+      <div class="space-y-5 font-body-md text-on-surface-variant leading-relaxed">
+        <p>
+          "Welcome to Kampala Islamic Secondary School — a place where the light of Quranic wisdom meets the pursuit of academic brilliance. Our institution stands as a beacon of balanced education, combining the timeless values of Islam with the rigors of modern scholarship."
+        </p>
+        <p>
+          "Every student who walks through our gates carries the potential to become a leader of character, faith, and intellect. Our dedicated staff work tirelessly to ensure that each child is seen, nurtured, and empowered to reach their fullest potential — in the classroom and beyond."
+        </p>
+      </div>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <button class="bg-primary text-white px-6 py-3 rounded-lg font-label-md uppercase tracking-wider hover:bg-primary-light transition-all flex items-center gap-2 shadow-md">
+          Read Full Message <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OUR VALUES ===== -->
+<section class="py-20 bg-surface-container-low relative overflow-hidden">
+  <div class="absolute inset-0 star-pattern pointer-events-none opacity-60"></div>
+  <div class="max-w-[1280px] mx-auto px-gutter relative z-10">
+    <div class="text-center mb-16">
+      <span class="text-gold font-label-md uppercase tracking-[0.2em] mb-3 block font-bold">What We Stand For</span>
+      <h2 class="font-headline-lg text-headline-lg text-primary mb-3">The Pillars of Our School</h2>
+      <p class="font-body-md text-on-surface-variant max-w-2xl mx-auto">Our core values define every interaction, lesson, and milestone at KISS.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Faith -->
+      <div class="bg-white p-8 rounded-xl border border-outline-variant/20 hover:shadow-xl transition-all duration-300 group">
+        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-4xl">auto_awesome</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md text-primary mb-4">Unwavering Imaan</h3>
+        <p class="font-body-md text-on-surface-variant">Rooting our daily lives in spiritual practice, fostering a deep connection with Allah that guides every action and decision.</p>
+      </div>
+      <!-- Academic Excellence -->
+      <div class="p-8 rounded-xl shadow-lg transform md:-translate-y-4 group" style="background: linear-gradient(135deg, #1a4731, #0f2744);">
+        <div class="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center text-gold mb-6 group-hover:rotate-12 transition-transform">
+          <span class="material-symbols-outlined text-4xl">school</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md text-gold mb-4">Academic Rigor</h3>
+        <p class="font-body-md text-white/80">Pursuing intellectual excellence through Uganda's national curriculum and beyond — preparing students for UNEB, university, and life.</p>
+      </div>
+      <!-- Community -->
+      <div class="bg-white p-8 rounded-xl border border-outline-variant/20 hover:shadow-xl transition-all duration-300 group">
+        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-4xl">groups</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md text-primary mb-4">Ummah & Community</h3>
+        <p class="font-body-md text-on-surface-variant">Building a welcoming, inclusive environment where every student feels valued, supported, and inspired to serve their community.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LATEST NEWS ===== -->
+<section class="py-20 bg-surface">
+  <div class="max-w-[1280px] mx-auto px-gutter">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+      <div>
+        <span class="text-gold font-label-md uppercase tracking-[0.2em] mb-2 block font-bold">Inside Kampala Islamic Secondary School</span>
+        <h2 class="font-headline-lg text-headline-lg text-primary">Latest News</h2>
+      </div>
+      <div class="flex gap-4">
+        <button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
+          <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+        <button class="w-12 h-12 rounded-full border border-outline flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
+          <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- News 1 -->
+      <article class="group cursor-pointer">
+        <div class="relative overflow-hidden rounded-xl mb-5 h-56 bg-gradient-to-br from-primary to-navy-mid flex items-center justify-center">
+          <div class="absolute inset-0 hex-pattern opacity-30"></div>
+          <span class="material-symbols-outlined text-white/30" style="font-size:60px">emoji_events</span>
+          <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded text-label-sm font-bold uppercase">Scholastic</div>
+        </div>
+        <time class="font-label-md text-label-md text-outline uppercase tracking-wider block mb-2">May 10, 2026</time>
+        <h3 class="font-headline-md text-headline-md text-primary group-hover:text-primary-light transition-colors mb-2">KISS Students Excel in National UCE Examinations</h3>
+        <p class="font-body-md text-on-surface-variant line-clamp-2">Our S.4 candidates achieved a remarkable 95% pass rate, with 40 students earning Division One distinctions...</p>
+      </article>
+      <!-- News 2 -->
+      <article class="group cursor-pointer">
+        <div class="relative overflow-hidden rounded-xl mb-5 h-56 bg-gradient-to-br from-navy to-primary flex items-center justify-center">
+          <div class="absolute inset-0 star-pattern opacity-40"></div>
+          <span class="material-symbols-outlined text-white/30" style="font-size:60px">volunteer_activism</span>
+          <div class="absolute top-4 left-4 bg-gold text-on-primary-fixed px-3 py-1 rounded text-label-sm font-bold uppercase">Community</div>
+        </div>
+        <time class="font-label-md text-label-md text-outline uppercase tracking-wider block mb-2">April 22, 2026</time>
+        <h3 class="font-headline-md text-headline-md text-primary group-hover:text-primary-light transition-colors mb-2">Ramadan Charity Drive Raises Shs 15 Million for Local Families</h3>
+        <p class="font-body-md text-on-surface-variant line-clamp-2">Students, parents, and staff united in the spirit of Zakat to support over 200 vulnerable families in Kampala...</p>
+      </article>
+      <!-- News 3 -->
+      <article class="group cursor-pointer">
+        <div class="relative overflow-hidden rounded-xl mb-5 h-56 bg-gradient-to-br from-primary-dark to-navy-mid flex items-center justify-center">
+          <div class="absolute inset-0 hex-pattern opacity-30"></div>
+          <span class="material-symbols-outlined text-white/30" style="font-size:60px">menu_book</span>
+          <div class="absolute top-4 left-4 bg-primary-light text-white px-3 py-1 rounded text-label-sm font-bold uppercase">Spiritual</div>
+        </div>
+        <time class="font-label-md text-label-md text-outline uppercase tracking-wider block mb-2">April 5, 2026</time>
+        <h3 class="font-headline-md text-headline-md text-primary group-hover:text-primary-light transition-colors mb-2">New Quran Memorisation Programme Launched for S.1 Students</h3>
+        <p class="font-body-md text-on-surface-variant line-clamp-2">The school introduces a structured Hifz programme offering students the opportunity to begin memorising the Holy Quran...</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== UPCOMING EVENTS ===== -->
+<section class="py-20 overflow-hidden relative" style="background: linear-gradient(135deg, #1a4731 0%, #0d2b1d 40%, #0f2744 100%);">
+  <div class="absolute inset-0 hex-pattern pointer-events-none opacity-60"></div>
+  <div class="max-w-[1280px] mx-auto px-gutter relative z-10 flex flex-col lg:flex-row gap-16 items-start">
+    <div class="lg:w-1/3">
+      <span class="text-gold font-label-md uppercase tracking-[0.2em] mb-4 block font-bold">Calendar</span>
+      <h2 class="font-headline-lg text-headline-lg text-white mb-6">Upcoming Events</h2>
+      <p class="font-body-lg text-body-lg text-white/70 mb-10">Join us for workshops, open days, and community gatherings designed to enrich heart and mind.</p>
+      <button class="bg-gold text-on-primary-fixed px-8 py-4 rounded-lg font-label-md uppercase tracking-wider hover:bg-gold-light transition-all flex items-center gap-3 font-bold shadow-lg">
+        View Full Calendar <span class="material-symbols-outlined">calendar_today</span>
+      </button>
+    </div>
+    <div class="lg:w-2/3 w-full grid grid-cols-1 gap-4">
+      <!-- Event 1 -->
+      <div class="group flex bg-white/10 border border-white/15 rounded-xl p-6 hover:bg-white/20 transition-all cursor-pointer">
+        <div class="flex-shrink-0 w-20 flex flex-col items-center justify-center border-r border-white/20 pr-5 mr-5">
+          <span class="font-headline-md text-gold text-2xl font-bold">05</span>
+          <span class="font-label-md uppercase tracking-widest text-white/60 text-xs">Jun</span>
+        </div>
+        <div class="flex-grow">
+          <span class="text-label-sm bg-gold text-on-primary-fixed px-2 py-0.5 rounded inline-block mb-2 uppercase font-bold tracking-tighter">Open Day</span>
+          <h4 class="font-headline-md text-headline-md text-white mb-1 group-hover:text-gold transition-colors">2026 Admissions Open House</h4>
+          <p class="text-white/60 flex items-center gap-2 text-sm">
+            <span class="material-symbols-outlined text-sm">schedule</span> 8:00 AM – 1:00 PM • Main Campus, Kampala
+          </p>
+        </div>
+        <div class="flex items-center">
+          <span class="material-symbols-outlined text-white/40 group-hover:text-gold transition-colors">arrow_forward</span>
+        </div>
+      </div>
+      <!-- Event 2 -->
+      <div class="group flex bg-white/10 border border-white/15 rounded-xl p-6 hover:bg-white/20 transition-all cursor-pointer">
+        <div class="flex-shrink-0 w-20 flex flex-col items-center justify-center border-r border-white/20 pr-5 mr-5">
+          <span class="font-headline-md text-gold text-2xl font-bold">20</span>
+          <span class="font-label-md uppercase tracking-widest text-white/60 text-xs">Jun</span>
+        </div>
+        <div class="flex-grow">
+          <span class="text-label-sm bg-white/20 text-white px-2 py-0.5 rounded inline-block mb-2 uppercase font-bold tracking-tighter">Symposium</span>
+          <h4 class="font-headline-md text-headline-md text-white mb-1 group-hover:text-gold transition-colors">Annual Islamic Education Forum 2026</h4>
+          <p class="text-white/60 flex items-center gap-2 text-sm">
+            <span class="material-symbols-outlined text-sm">schedule</span> 9:00 AM – 5:00 PM • School Assembly Hall
+          </p>
+        </div>
+        <div class="flex items-center">
+          <span class="material-symbols-outlined text-white/40 group-hover:text-gold transition-colors">arrow_forward</span>
+        </div>
+      </div>
+      <!-- Event 3 -->
+      <div class="group flex bg-white/10 border border-white/15 rounded-xl p-6 hover:bg-white/20 transition-all cursor-pointer">
+        <div class="flex-shrink-0 w-20 flex flex-col items-center justify-center border-r border-white/20 pr-5 mr-5">
+          <span class="font-headline-md text-gold text-2xl font-bold">15</span>
+          <span class="font-label-md uppercase tracking-widest text-white/60 text-xs">Jul</span>
+        </div>
+        <div class="flex-grow">
+          <span class="text-label-sm bg-white/20 text-white px-2 py-0.5 rounded inline-block mb-2 uppercase font-bold tracking-tighter">Awards</span>
+          <h4 class="font-headline-md text-headline-md text-white mb-1 group-hover:text-gold transition-colors">Annual Prize-Giving & Graduation Ceremony</h4>
+          <p class="text-white/60 flex items-center gap-2 text-sm">
+            <span class="material-symbols-outlined text-sm">schedule</span> 10:00 AM – 2:00 PM • Serena Conference Centre
+          </p>
+        </div>
+        <div class="flex items-center">
+          <span class="material-symbols-outlined text-white/40 group-hover:text-gold transition-colors">arrow_forward</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ADMISSIONS CTA ===== -->
+<section class="py-20 bg-surface-container-low relative overflow-hidden">
+  <div class="absolute inset-0 star-pattern pointer-events-none"></div>
+  <div class="max-w-[1280px] mx-auto px-gutter text-center relative z-10">
+    <div class="font-arabic text-3xl text-primary mb-4 leading-relaxed" dir="rtl">
+      طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَىٰ كُلِّ مُسْلِمٍ
+    </div>
+    <p class="font-body-md text-on-surface-variant italic mb-10">"Seeking knowledge is an obligation upon every Muslim." — Prophet Muhammad ﷺ</p>
+    <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Join the KISS Family</h2>
+    <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">Admissions are now open for Senior 1 – Senior 6. Give your child the gift of an education grounded in faith and academic excellence.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a class="bg-primary text-white px-10 py-4 rounded-lg font-label-md uppercase tracking-wider hover:bg-primary-light transition-all shadow-lg hover:-translate-y-1 font-bold" href="admissions.html">
+        Apply Now
+      </a>
+      <!-- <button class="border-2 border-primary text-primary px-10 py-4 rounded-lg font-label-md uppercase tracking-wider hover:bg-primary hover:text-white transition-all font-bold">
+        Download Prospectus
+      </button> -->
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer style="background: linear-gradient(135deg, #0d2b1d 0%, #1a4731 50%, #0f2744 100%);" class="text-white relative overflow-hidden">
+  <div class="absolute inset-0 hex-pattern pointer-events-none opacity-30"></div>
+  <div class="max-w-[1280px] mx-auto px-gutter py-16 grid grid-cols-1 md:grid-cols-4 gap-8 items-start relative z-10">
+    <!-- Brand -->
+    <div class="md:col-span-1">
+      <div class="flex items-center gap-2 mb-4">
+        <span style="color:#c9a84c; font-size:22px;">★</span>
+        <div class="font-headline-md text-gold font-bold">KISS</div>
+      </div>
+      <p class="font-body-md text-white/70 leading-relaxed text-sm mb-4">
+        Kampala Islamic Secondary School — dedicated to nurturing the soul, enlightening the mind, and serving humanity through the light of faith and education.
+      </p>
+    </div>
+    <!-- Quick Links -->
+    <div class="md:col-span-1">
+      <h5 class="font-label-md text-gold uppercase tracking-widest mb-5 font-bold text-xs">Quick Links</h5>
+      <ul class="space-y-2.5">
+        <li><a class="font-body-md text-white/70 hover:text-gold hover:translate-x-1 transition-all block text-sm" href="#">Prayer Times</a></li>
+        <li><a class="font-body-md text-white/70 hover:text-gold hover:translate-x-1 transition-all block text-sm" href="#">Admissions Portal</a></li>
+        <li><a class="font-body-md text-white/70 hover:text-gold hover:translate-x-1 transition-all block text-sm" href="#">Student Life</a></li>
+        <li><a class="font-body-md text-white/70 hover:text-gold hover:translate-x-1 transition-all block text-sm" href="#">Curriculum</a></li>
+        <li><a class="font-body-md text-white/70 hover:text-gold hover:translate-x-1 transition-all block text-sm" href="#">Alumni</a></li>
+      </ul>
+    </div>
+    <!-- Connect -->
+    <div class="md:col-span-1">
+      <h5 class="font-label-md text-gold uppercase tracking-widest mb-5 font-bold text-xs">Connect</h5>
+      <ul class="space-y-2.5">
+        <li><a class="font-body-md text-white/70 hover:text-gold hover:translate-x-1 transition-all block text-sm" href="#">Facebook</a></li>
+        <li><a class="font-body-md text-white/70 hover:text-gold hover:translate-x-1 transition-all block text-sm" href="#">Instagram</a></li>
+        <li><a class="font-body-md text-white/70 hover:text-gold hover:translate-x-1 transition-all block text-sm" href="#">YouTube</a></li>
+        <li><a class="font-body-md text-white/70 hover:text-gold hover:translate-x-1 transition-all block text-sm" href="#">WhatsApp</a></li>
+      </ul>
+    </div>
+    <!-- Contact -->
+    <div class="md:col-span-1">
+      <h5 class="font-label-md text-gold uppercase tracking-widest mb-5 font-bold text-xs">Contact Us</h5>
+      <p class="font-body-md text-white/70 mb-3 flex items-start gap-2 text-sm">
+        <span class="material-symbols-outlined text-sm mt-0.5">location_on</span> Bweyogerere, Kampala, Uganda
+      </p>
+      <p class="font-body-md text-white/70 mb-3 flex items-center gap-2 text-sm">
+        <span class="material-symbols-outlined text-sm">phone</span> +256 414 123 456
+      </p>
+      <p class="font-body-md text-white/70 flex items-center gap-2 text-sm">
+        <span class="material-symbols-outlined text-sm">mail</span> kampalaislamic@gmail.com
+      </p>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 relative z-10">
+    <div class="max-w-[1280px] mx-auto px-gutter flex flex-col md:flex-row justify-between items-center text-white/50 text-xs gap-4">
+      <span>© 2026 Kampala Islamic Secondary School. All Rights Reserved.</span>
+      <div class="flex gap-8">
+        <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+        <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Enroll FAB -->
+<button class="fixed bottom-8 right-8 bg-gold text-on-primary-fixed w-16 h-16 rounded-full shadow-2xl flex items-center justify-center group hover:scale-110 active:scale-95 transition-all z-50">
+  <span class="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform">edit_square</span>
+  <span class="absolute right-full mr-4 bg-white text-primary font-label-md px-5 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-primary/10 font-bold text-sm">
+    Apply Now
+  </span>
+</button>
+
+<script>
+  // Sticky Navbar Shrink
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('main-nav');
+    const container = document.getElementById('nav-container');
+    if (window.scrollY > 60) {
+      container.classList.remove('h-20');
+      container.classList.add('h-14');
+      nav.classList.add('shadow-xl');
+    } else {
+      container.classList.add('h-20');
+      container.classList.remove('h-14');
+      nav.classList.remove('shadow-xl');
+    }
+  });
+</script>
+</body>
+</html>

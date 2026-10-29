@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us | Kampala Islamic Secondary School</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Literata:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@500&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "primary":"#1a4731","primary-dark":"#0d2b1d","primary-light":"#2d6b4a",
+          "gold":"#c9a84c","gold-light":"#e8c96a","navy":"#0f2744","navy-mid":"#1b3d6b",
+          "surface":"#f7f9f7","surface-container-low":"#f2f6f2",
+          "on-surface":"#0d1f12","on-surface-variant":"#3d4f42","outline":"#6e7e73",
+          "outline-variant":"#bfcfc3","on-primary-fixed":"#1a1200",
+        },
+        spacing:{"gutter":"24px"},
+        fontFamily:{
+          "headline-lg":["Literata"],"headline-md":["Literata"],"display-lg":["Literata"],
+          "body-lg":["Hanken Grotesk"],"body-md":["Hanken Grotesk"],
+          "label-md":["JetBrains Mono"],"label-sm":["JetBrains Mono"],"arabic":["Amiri"],
+        },
+        fontSize:{
+          "display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],
+          "headline-lg":["32px",{"lineHeight":"40px","fontWeight":"600"}],
+          "headline-lg-mobile":["28px",{"lineHeight":"36px","fontWeight":"600"}],
+          "headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}],
+          "body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],
+          "body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],
+          "label-md":["14px",{"lineHeight":"20px","letterSpacing":"0.02em","fontWeight":"500"}],
+          "label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"500"}],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .material-symbols-outlined{font-variation-settings:"FILL" 0,"wght" 400,"GRAD" 0,"opsz" 24;display:inline-block;line-height:1;}
+  .hex-pattern{background-image:url("data:image/svg+xml,%3Csvg width='80' height='92' viewBox='0 0 80 92' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 4L74 23V61L40 80L6 61V23L40 4Z' fill='none' stroke='%23ffffff' stroke-width='1' stroke-opacity='0.12'/%3E%3Cpath d='M40 16L66 31V61L40 76L14 61V31L40 16Z' fill='none' stroke='%23c9a84c' stroke-width='0.5' stroke-opacity='0.15'/%3E%3C/svg%3E");background-size:80px 92px;}
+  .star-pattern{background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5L33.5 21L49 15L38 27L54 30L38 33L49 45L33.5 39L30 55L26.5 39L11 45L22 33L6 30L22 27L11 15L26.5 21L30 5Z' fill='%23c9a84c' fill-opacity='0.06'/%3E%3C/svg%3E");background-size:60px 60px;}
+  .hero-gradient{background:linear-gradient(135deg,#0d2b1d 0%,#1a4731 30%,#1b3d6b 70%,#0f2744 100%);}
+  .nav-gradient{background:linear-gradient(90deg,#0d2b1d 0%,#1a4731 100%);}
+  .gold-divider{background:linear-gradient(90deg,transparent,#c9a84c,transparent);height:1px;}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:#c9a84c!important;box-shadow:0 0 0 3px rgba(201,168,76,0.15);}
+  .contact-card{transition:transform 0.3s,box-shadow 0.3s;}
+  .contact-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(26,71,49,0.15);}
+  .map-container{position:relative;overflow:hidden;border-radius:1rem;background:linear-gradient(145deg,#1a4731,#0f2744);}
+  .map-pin{animation:bounce 2s infinite;}
+  @keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+  .whatsapp-btn{background:#25D366;}
+  .whatsapp-btn:hover{background:#128C7E;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+  .fade-up{animation:fadeUp 0.6s ease forwards;}
+  .prayer-row:nth-child(3){background:rgba(201,168,76,0.1);border-radius:8px;}
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+
+<!-- NAV -->
+<!-- <nav class="fixed top-0 w-full z-50 nav-gradient border-b border-white/10 shadow-lg" id="main-nav">
+  <div class="max-w-[1280px] mx-auto px-gutter flex justify-between items-center h-20" id="nav-container">
+    <a href="index.html" class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full border-2 border-gold flex items-center justify-center flex-shrink-0">
+        <span style="color:#c9a84c;font-size:18px;">★</span>
+      </div>
+      <div>
+        <div class="text-white font-bold text-sm leading-tight" style="font-family:Literata;">Kampala Islamic Secondary School</div>
+        <div class="text-[10px] uppercase tracking-[0.2em]" style="color:#e8c96a;font-family:'JetBrains Mono';">Always Aim higher</div>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a class="font-label-md text-label-md uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="index.html">Home</a>
+      <a class="font-label-md text-label-md uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="about.html">About</a>
+       <a class="font-label-md text-label-md uppercase tracking-wider text-white border-b-2 border-gold font-bold pb-1" href="contact.html">Contact</a>
+             <a class="font-label-md text-label-md uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="events.html">Events</a>
+    </div>
+    <a class="hidden md:block bg-gold text-on-primary-fixed px-6 py-2.5 rounded-lg font-label-md uppercase tracking-wider hover:bg-gold-light transition-all font-bold shadow-md" href="admissions.html">Enroll Now</a>
+    <button class="md:hidden text-white" onclick="document.getElementById('mob').classList.toggle('hidden')"><span class="material-symbols-outlined">menu</span></button>
+  </div>
+  <div class="hidden md:hidden" id="mob">
+    <div class="px-gutter py-4 flex flex-col gap-4 bg-primary-dark border-t border-white/10">
+      <a class="text-white/70 uppercase tracking-wider text-sm" href="index.html">Home</a>
+      <a class="text-white/70 uppercase tracking-wider text-sm" href="about.html">About</a>
+      <a class="text-white/70 uppercase tracking-wider text-sm" href="admissions.html">Admissions</a>
+      <a class="text-white font-bold uppercase tracking-wider text-sm" href="contact.html">Contact</a>
+      <button class="bg-gold text-on-primary-fixed px-6 py-2.5 rounded-lg font-bold uppercase tracking-wider w-full">Enroll Now</button>
+    </div>
+  </div>
+</nav> -->
+
+  <nav class="fixed top-0 w-full z-50 nav-gradient border-b border-white/10 shadow-lg transition-all duration-300" id="main-nav">
+  <div class="max-w-[1280px] mx-auto px-gutter flex justify-between items-center h-20" id="nav-container">
+    <!-- Logo + Name -->
+    <!-- <div class="flex items-center gap-3">
+
+
+      <div class="w-10 h-10 rounded-full border-2 border-gold flex items-center justify-center">
+    <img src="resources/badge.jpeg" alt="School Badge" class="w-full h-full object-contain" />  
+      </div>
+      <div>
+        <div class="font-headline-md text-white font-bold text-sm leading-tight">Kampala Islamic Secondary School</div>
+        <div class="font-label-sm text-gold-light uppercase tracking-[0.2em] text-[10px]">Always Aim Higher</div>
+      </div>
+    </div> -->
+
+
+    <div class="flex items-center gap-3">
+  <!-- <div class="w-20 h-20 flex items-center justify-center">
+    <img src="resources/badge-removebg-preview.png" alt="School Badge" 
+         class="w-full h-full object-contain mix-blend-mode-multiply" 
+         style="mix-blend-mode: luminosity;" />
+  </div> -->
+
+  <div class="w-16 h-16 flex items-center justify-center rounded-full bg-white p-1">
+  <img src="resources/badge-removebg-preview.png" alt="School Badge" 
+    class="w-full h-full object-contain" />
+</div>
+  <div>
+    <!-- <div class="font-headline-md text-[#1a4731] font-bold text-sm leading-tight">Kampala Islamic Secondary School</div>
+    <div class="font-label-sm text-gold-light uppercase tracking-[0.2em] text-[10px]">Always Aim Higher</div> -->
+
+            <div class="font-headline-md text-white font-bold text-sm leading-tight">Kampala Islamic Secondary School</div>
+        <div class="font-label-sm text-gold-light uppercase tracking-[0.2em] text-[10px]">Always Aim Higher</div>
+  </div>
+</div>
+
+
+
+    <!-- Nav Links -->
+    <div class="hidden md:flex items-center gap-8">
+      <a class="font-label-md text-label-md uppercase tracking-wider text-white/70 hover:text-white transition-colors"  href="index.html">Home</a>
+      <a class="font-label-md text-label-md uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="about.html">About</a>
+      <a class="font-label-md text-label-md uppercase tracking-wider text-white border-b-2 border-gold font-bold pb-1" href="contact.html">Contact</a>
+      <a class="font-label-md text-label-md uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="events.html">Events</a>
+      <!-- <a class="font-label-md text-label-md uppercase tracking-wider text-white/70 hover:text-white transition-colors" href="admissions.html">Admissions</a> -->
+    </div>
+    <!-- CTA Button -->
+    <a class="hidden md:block bg-gold text-on-primary-fixed px-6 py-2.5 rounded-lg font-label-md uppercase tracking-wider hover:bg-gold-light transition-all active:scale-95 shadow-md font-bold" href="admissions.html">
+      Enroll Now
+    </a>
+    <!-- Mobile Menu -->
+    <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <div class="hidden md:hidden" id="mobile-menu">
+    <div class="px-gutter py-4 flex flex-col gap-4 bg-primary-dark border-t border-white/10">
+      <a class="font-label-md text-label-md uppercase tracking-wider text-white" href="index.html">Home</a>
+      <a class="font-label-md text-label-md uppercase tracking-wider text-white/70" href="about.html">About Us</a>
+            <a class="font-label-md text-label-md uppercase tracking-wider text-white/70" href="contact.html">Contact</a>
+
+      <a class="font-label-md text-label-md uppercase tracking-wider text-white/70" href="#">Events</a>
+      <a class="font-label-md text-label-md uppercase tracking-wider text-white/70" href="#">Gallery</a>
+      <button class="bg-gold text-on-primary-fixed px-6 py-2.5 rounded-lg font-label-md uppercase tracking-wider w-full font-bold">Enroll Now</button>
+    </div>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<header class="relative h-[480px] flex items-center justify-center overflow-hidden hero-gradient pt-20">
+  <div class="absolute inset-0 hex-pattern pointer-events-none"></div>
+  <div class="absolute inset-0" style="background:radial-gradient(ellipse at 50% 60%,rgba(201,168,76,0.1) 0%,transparent 65%);pointer-events:none;"></div>
+  <div class="relative z-10 text-center px-gutter fade-up">
+    <!-- <div class="font-arabic text-3xl text-gold mb-4 leading-relaxed" dir="rtl" style="text-shadow:0 0 20px rgba(201,168,76,0.4);">
+      وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ
+    </div>
+    <p class="text-gold/70 text-xs mb-6 uppercase tracking-widest" style="font-family:'JetBrains Mono';">"Cooperate in righteousness and piety." — Quran 5:2</p> -->
+    <h1 class="text-white font-bold mb-4" style="font-family:Literata;font-size:clamp(28px,5vw,48px);line-height:1.15;">Get In Touch</h1>
+    <p class="text-white/70 max-w-xl mx-auto" style="font-family:'Hanken Grotesk';font-size:18px;">We'd love to hear from you. Our team is here to help, In sha Allah.</p>
+  </div>
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 text-white/50 text-xs uppercase tracking-widest" style="font-family:'JetBrains Mono';">
+    <a href="index.html" class="hover:text-gold transition-colors">Home</a>
+    <span class="material-symbols-outlined text-sm">chevron_right</span>
+    <span class="text-gold">Contact</span>
+  </div>
+</header>
+
+<!-- CONTACT CARDS -->
+<section class="py-20 bg-surface">
+  <div class="max-w-[1280px] mx-auto px-gutter">
+    <div class="text-center mb-16">
+      <span class="text-gold font-bold uppercase tracking-[0.2em] text-sm block mb-3" style="font-family:'JetBrains Mono';">Reach Us</span>
+      <h2 class="text-primary mb-3" style="font-family:Literata;font-size:32px;font-weight:600;">We're Always Here</h2>
+      <div class="gold-divider w-24 mx-auto mt-4"></div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+      <!-- Phone -->
+      <div class="contact-card bg-white rounded-xl p-7 border border-outline-variant/20 shadow-sm text-center">
+        <div class="w-16 h-16 rounded-full mx-auto mb-5 flex items-center justify-center" style="background:linear-gradient(135deg,#1a4731,#0f2744);">
+          <span class="material-symbols-outlined text-gold text-2xl">phone_in_talk</span>
+        </div>
+        <h4 class="text-primary font-bold mb-2" style="font-family:Literata;font-size:18px;">Call Us</h4>
+        <p class="text-on-surface-variant text-sm mb-3">Mon–Fri, 7:30am – 5pm</p>
+        <a href="tel:+256414123456" class="text-primary font-bold text-sm hover:text-primary-light transition-colors block">+256 414 123 456</a>
+        <a href="tel:+256772123456" class="text-primary font-bold text-sm hover:text-primary-light transition-colors block mt-1">+256 772 123 456</a>
+      </div>
+      <!-- Email -->
+      <div class="contact-card bg-white rounded-xl p-7 border border-outline-variant/20 shadow-sm text-center">
+        <div class="w-16 h-16 rounded-full mx-auto mb-5 flex items-center justify-center" style="background:linear-gradient(135deg,#0f2744,#1b3d6b);">
+          <span class="material-symbols-outlined text-gold text-2xl">mail</span>
+        </div>
+        <h4 class="text-primary font-bold mb-2" style="font-family:Literata;font-size:18px;">Email Us</h4>
+        <p class="text-on-surface-variant text-sm mb-3">We reply within 24 hours</p>
+        <a href="mailto:kampalaislamic@gmail.com" class="text-primary font-bold text-sm hover:text-primary-light transition-colors block">kampalaislamic@gmail.com</a>
+        <a href="mailto:admissions@kiss.ac.ug" class="text-primary font-bold text-sm hover:text-primary-light transition-colors block mt-1">admissions@kiss.ac.ug</a>
+      </div>
+      <!-- Location -->
+      <div class="contact-card bg-white rounded-xl p-7 border border-outline-variant/20 shadow-sm text-center">
+        <div class="w-16 h-16 rounded-full mx-auto mb-5 flex items-center justify-center" style="background:linear-gradient(135deg,#2d6b4a,#1a4731);">
+          <span class="material-symbols-outlined text-gold text-2xl">location_on</span>
+        </div>
+        <h4 class="text-primary font-bold mb-2" style="font-family:Literata;font-size:18px;">Visit Us</h4>
+        <p class="text-on-surface-variant text-sm mb-3">Open days every term</p>
+        <p class="text-primary font-bold text-sm">Bweyogerere</p>
+        <p class="text-on-surface-variant text-sm">Kampala, Uganda</p>
+      </div>
+      <!-- WhatsApp -->
+      <div class="contact-card rounded-xl p-7 shadow-lg text-center whatsapp-btn cursor-pointer" onclick="window.open('https://wa.me/256772123456','_blank')">
+        <div class="w-16 h-16 rounded-full mx-auto mb-5 flex items-center justify-center bg-white/20">
+          <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </div>
+        <h4 class="text-white font-bold mb-2" style="font-family:Literata;font-size:18px;">WhatsApp</h4>
+        <p class="text-white/80 text-sm mb-3">Quick replies, anytime</p>
+        <p class="text-white font-bold text-sm">+256 772 123 456</p>
+        <p class="text-white/60 text-xs mt-1">Tap to open WhatsApp</p>
+      </div>
+    </div>
+
+    <!-- MAIN GRID: Form + Info -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <!-- Contact Form -->
+      <div class="lg:col-span-7">
+        <div class="bg-white rounded-2xl border border-outline-variant/20 shadow-sm overflow-hidden">
+          <div class="p-8" style="background:linear-gradient(135deg,#1a4731,#0f2744);">
+            <h3 class="text-gold font-bold text-2xl mb-1" style="font-family:Literata;">Send Us a Message</h3>
+            <p class="text-white/60 text-sm">Fill in your details and we'll get back to you as soon as possible.</p>
+          </div>
+          <div class="p-8 space-y-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-primary text-xs uppercase tracking-widest font-bold mb-2" style="font-family:'JetBrains Mono';">Your Name *</label>
+                <input type="text" placeholder="Full name" class="w-full border border-outline-variant rounded-lg px-4 py-3 text-on-surface placeholder-outline transition-all" style="font-family:'Hanken Grotesk';">
+              </div>
+              <div>
+                <label class="block text-primary text-xs uppercase tracking-widest font-bold mb-2" style="font-family:'JetBrains Mono';">Phone Number *</label>
+                <input type="tel" placeholder="+256 7XX XXX XXX" class="w-full border border-outline-variant rounded-lg px-4 py-3 text-on-surface placeholder-outline transition-all" style="font-family:'Hanken Grotesk';">
+              </div>
+            </div>
+            <div>
+              <label class="block text-primary text-xs uppercase tracking-widest font-bold mb-2" style="font-family:'JetBrains Mono';">Email Address</label>
+              <input type="email" placeholder="your@email.com" class="w-full border border-outline-variant rounded-lg px-4 py-3 text-on-surface placeholder-outline transition-all" style="font-family:'Hanken Grotesk';">
+            </div>
+            <div>
+              <label class="block text-primary text-xs uppercase tracking-widest font-bold mb-2" style="font-family:'JetBrains Mono';">Department</label>
+              <select class="w-full border border-outline-variant rounded-lg px-4 py-3 text-on-surface transition-all" style="font-family:'Hanken Grotesk';">
+                <option value="">Select department...</option>
+                <option>Admissions Office</option>
+                <option>Bursar / Fees</option>
+                <option>Principal's Office</option>
+                <option>Islamic Studies Department</option>
+                <option>General Enquiry</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-primary text-xs uppercase tracking-widest font-bold mb-2" style="font-family:'JetBrains Mono';">Subject *</label>
+              <input type="text" placeholder="What is your message about?" class="w-full border border-outline-variant rounded-lg px-4 py-3 text-on-surface placeholder-outline transition-all" style="font-family:'Hanken Grotesk';">
+            </div>
+            <div>
+              <label class="block text-primary text-xs uppercase tracking-widest font-bold mb-2" style="font-family:'JetBrains Mono';">Message *</label>
+              <textarea rows="5" placeholder="Type your message here..." class="w-full border border-outline-variant rounded-lg px-4 py-3 text-on-surface placeholder-outline transition-all resize-none" style="font-family:'Hanken Grotesk';"></textarea>
+            </div>
+            <button onclick="sendMessage(this)" class="w-full bg-primary text-white py-4 rounded-lg font-bold uppercase tracking-wider hover:bg-primary-light transition-all flex items-center justify-center gap-3 shadow-md hover:-translate-y-1 text-sm" style="font-family:'JetBrains Mono';">
+              <span class="material-symbols-outlined">send</span> Send Message
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Info -->
+      <div class="lg:col-span-5 space-y-6">
+        <!-- Office Hours -->
+        <div class="bg-white rounded-xl border border-outline-variant/20 shadow-sm overflow-hidden">
+          <div class="px-6 py-5 border-b border-outline-variant/20 flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary">schedule</span>
+            <h4 class="text-primary font-bold" style="font-family:Literata;font-size:18px;">Office Hours</h4>
+          </div>
+          <div class="p-6 space-y-3">
+            <div class="prayer-row flex justify-between items-center py-2 px-2">
+              <span class="text-on-surface-variant text-sm" style="font-family:'Hanken Grotesk';">Monday – Friday</span>
+              <span class="text-primary font-bold text-sm" style="font-family:'JetBrains Mono';">7:30 AM – 5:00 PM</span>
+            </div>
+            <div class="flex justify-between items-center py-2 px-2">
+              <span class="text-on-surface-variant text-sm">Saturday</span>
+              <span class="text-primary font-bold text-sm" style="font-family:'JetBrains Mono';">8:00 AM – 1:00 PM</span>
+            </div>
+            <div class="flex justify-between items-center py-2 px-2">
+              <span class="text-on-surface-variant text-sm">Sunday</span>
+              <span class="text-outline text-sm" style="font-family:'JetBrains Mono';">Closed (Jumu'ah prep)</span>
+            </div>
+            <div class="flex justify-between items-center py-2 px-2">
+              <span class="text-on-surface-variant text-sm">Public Holidays</span>
+              <span class="text-outline text-sm" style="font-family:'JetBrains Mono';">Closed</span>
+            </div>
+            <div class="mt-3 p-3 rounded-lg flex items-start gap-2" style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.2);">
+              <span class="material-symbols-outlined text-gold text-sm mt-0.5">info</span>
+              <p class="text-on-surface-variant text-xs leading-relaxed">During school holidays, reduced staffing may apply. WhatsApp is your fastest option.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Prayer Times Banner -->
+        <div class="rounded-xl overflow-hidden shadow-lg" style="background:linear-gradient(135deg,#1a4731,#0f2744);">
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="material-symbols-outlined text-gold text-2xl">mosque</span>
+              <h4 class="text-gold font-bold" style="font-family:Literata;font-size:18px;">School Prayer Times</h4>
+            </div>
+            <div class="space-y-2">
+              <div class="flex justify-between text-sm"><span class="text-white/70">Dhuhr (Midday)</span><span class="text-gold font-bold" style="font-family:'JetBrains Mono';">1:15 PM</span></div>
+              <div class="flex justify-between text-sm"><span class="text-white/70">Asr (Afternoon)</span><span class="text-gold font-bold" style="font-family:'JetBrains Mono';">4:30 PM</span></div>
+              <div class="flex justify-between text-sm"><span class="text-white/70">Maghrib (Sunset)</span><span class="text-gold font-bold" style="font-family:'JetBrains Mono';">6:45 PM</span></div>
+              <div class="flex justify-between text-sm"><span class="text-white/70">Jumu'ah (Friday)</span><span class="text-gold font-bold" style="font-family:'JetBrains Mono';">12:30 PM</span></div>
+            </div>
+            <p class="text-white/40 text-xs mt-4">* Times adjusted seasonally. Fajr & Isha for boarders only.</p>
+          </div>
+        </div>
+
+        <!-- Find Us -->
+        <div class="bg-white rounded-xl border border-outline-variant/20 shadow-sm overflow-hidden">
+          <div class="px-6 py-5 border-b border-outline-variant/20 flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary">map</span>
+            <h4 class="text-primary font-bold" style="font-family:Literata;font-size:18px;">Find Us</h4>
+          </div>
+          <!-- Illustrated map placeholder with styled look -->
+          <div class="map-container h-52 relative">
+            <div class="absolute inset-0 hex-pattern opacity-40"></div>
+            <!-- Grid lines -->
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+              <line x1="0" y1="67" x2="400" y2="67" stroke="#c9a84c" stroke-width="0.5" stroke-opacity="0.3"/>
+              <line x1="0" y1="133" x2="400" y2="133" stroke="#c9a84c" stroke-width="0.5" stroke-opacity="0.3"/>
+              <line x1="133" y1="0" x2="133" y2="200" stroke="#c9a84c" stroke-width="0.5" stroke-opacity="0.3"/>
+              <line x1="267" y1="0" x2="267" y2="200" stroke="#c9a84c" stroke-width="0.5" stroke-opacity="0.3"/>
+              <!-- Roads -->
+              <path d="M0 100 Q100 90 200 100 Q300 110 400 100" fill="none" stroke="white" stroke-width="3" stroke-opacity="0.2"/>
+              <path d="M200 0 Q210 50 200 100 Q190 150 200 200" fill="none" stroke="white" stroke-width="3" stroke-opacity="0.2"/>
+              <path d="M50 0 Q60 100 50 200" fill="none" stroke="white" stroke-width="2" stroke-opacity="0.1"/>
+              <path d="M0 50 Q200 40 400 50" fill="none" stroke="white" stroke-width="2" stroke-opacity="0.1"/>
+            </svg>
+            <!-- Pin -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center map-pin">
+              <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center shadow-2xl mx-auto border-4 border-white">
+                <span class="material-symbols-outlined text-on-primary-fixed text-xl">school</span>
+              </div>
+              <div class="mt-2 bg-white/95 rounded-lg px-3 py-1 text-xs font-bold text-primary shadow-lg whitespace-nowrap" style="font-family:'JetBrains Mono';">KISS — Bweyogerere</div>
+            </div>
+          </div>
+          <div class="p-4">
+            <a href="https://maps.google.com/?q=Old+Kampala++Kampala+Uganda" target="_blank" class="w-full bg-primary text-white py-3 rounded-lg font-bold uppercase tracking-wider hover:bg-primary-light transition-all flex items-center justify-center gap-2 text-xs" style="font-family:'JetBrains Mono';">
+              <span class="material-symbols-outlined text-sm">open_in_new</span> Open in Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPARTMENTS DIRECTORY -->
+<section class="py-20 relative overflow-hidden" style="background:linear-gradient(135deg,#1a4731 0%,#0d2b1d 40%,#0f2744 100%);">
+  <div class="absolute inset-0 hex-pattern pointer-events-none opacity-50"></div>
+  <div class="max-w-[1280px] mx-auto px-gutter relative z-10">
+    <div class="text-center mb-12">
+      <span class="text-gold font-bold uppercase tracking-[0.2em] text-sm block mb-3" style="font-family:'JetBrains Mono';">Direct Lines</span>
+      <h2 class="text-white mb-3" style="font-family:Literata;font-size:32px;font-weight:600;">Department Directory</h2>
+      <div style="background:linear-gradient(90deg,transparent,#c9a84c,transparent);height:1px;" class="w-24 mx-auto mt-4"></div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="bg-white/10 border border-white/15 rounded-xl p-6 hover:bg-white/20 transition-all group">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-gold">manage_accounts</span></div>
+          <div>
+            <h4 class="text-white font-bold mb-1" style="font-family:Literata;">Principal's Office</h4>
+            <p class="text-white/50 text-xs mb-2">Academic policy, disciplinary matters, parent meetings</p>
+            <a href="tel:+256414123456" class="text-gold text-sm font-bold hover:text-gold-light transition-colors" style="font-family:'JetBrains Mono';">+256 414 123 456</a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white/10 border border-white/15 rounded-xl p-6 hover:bg-white/20 transition-all group">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-gold">how_to_reg</span></div>
+          <div>
+            <h4 class="text-white font-bold mb-1" style="font-family:Literata;">Admissions Office</h4>
+            <p class="text-white/50 text-xs mb-2">New student applications, transfers, open days</p>
+            <a href="mailto:admissions@kiss.ac.ug" class="text-gold text-sm font-bold hover:text-gold-light transition-colors" style="font-family:'JetBrains Mono';">admissions@kiss.ac.ug</a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white/10 border border-white/15 rounded-xl p-6 hover:bg-white/20 transition-all group">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-gold">payments</span></div>
+          <div>
+            <h4 class="text-white font-bold mb-1" style="font-family:Literata;">Bursar's Office</h4>
+            <p class="text-white/50 text-xs mb-2">Fee payments, receipts, bursary applications</p>
+            <a href="mailto:bursar@kiss.ac.ug" class="text-gold text-sm font-bold hover:text-gold-light transition-colors" style="font-family:'JetBrains Mono';">bursar@kiss.ac.ug</a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white/10 border border-white/15 rounded-xl p-6 hover:bg-white/20 transition-all group">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-gold">mosque</span></div>
+          <div>
+            <h4 class="text-white font-bold mb-1" style="font-family:Literata;">Islamic Studies Dept.</h4>
+            <p class="text-white/50 text-xs mb-2">Quran, Fiqh, Hifz programme, Islamic calendar</p>
+            <a href="mailto:islamics@kiss.ac.ug" class="text-gold text-sm font-bold hover:text-gold-light transition-colors" style="font-family:'JetBrains Mono';">islamics@kiss.ac.ug</a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white/10 border border-white/15 rounded-xl p-6 hover:bg-white/20 transition-all group">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-gold">hotel</span></div>
+          <div>
+            <h4 class="text-white font-bold mb-1" style="font-family:Literata;">Boarding / Matron</h4>
+            <p class="text-white/50 text-xs mb-2">Dormitory welfare, health, boarding enquiries</p>
+            <a href="tel:+256772123458" class="text-gold text-sm font-bold hover:text-gold-light transition-colors" style="font-family:'JetBrains Mono';">+256 772 123 458</a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white/10 border border-white/15 rounded-xl p-6 hover:bg-white/20 transition-all group">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-gold">groups</span></div>
+          <div>
+            <h4 class="text-white font-bold mb-1" style="font-family:Literata;">Alumni Relations</h4>
+            <p class="text-white/50 text-xs mb-2">Old students, donations, mentorship programmes</p>
+            <a href="mailto:alumni@kiss.ac.ug" class="text-gold text-sm font-bold hover:text-gold-light transition-colors" style="font-family:'JetBrains Mono';">alumni@kiss.ac.ug</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:linear-gradient(135deg,#0d2b1d 0%,#1a4731 50%,#0f2744 100%);" class="text-white relative overflow-hidden">
+  <div class="absolute inset-0 hex-pattern pointer-events-none opacity-30"></div>
+  <div class="max-w-[1280px] mx-auto px-gutter py-16 grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+    <div>
+      <div class="flex items-center gap-2 mb-4"><span style="color:#c9a84c;font-size:22px;">★</span><span class="font-bold text-gold" style="font-family:Literata;">KISS</span></div>
+      <p class="text-white/70 text-sm leading-relaxed mb-4">Nurturing the soul, enlightening the mind, serving humanity.</p>
+    </div>
+    <div>
+      <h5 class="text-gold uppercase tracking-widest mb-5 font-bold text-xs" style="font-family:'JetBrains Mono';">Quick Links</h5>
+      <ul class="space-y-2.5">
+        <li><a class="text-white/70 hover:text-gold transition-all block text-sm" href="index.html">Home</a></li>
+        <li><a class="text-white/70 hover:text-gold transition-all block text-sm" href="about.html">About Us</a></li>
+        <li><a class="text-white/70 hover:text-gold transition-all block text-sm" href="admissions.html">Admissions</a></li>
+        <li><a class="text-white/70 hover:text-gold transition-all block text-sm" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="text-gold uppercase tracking-widest mb-5 font-bold text-xs" style="font-family:'JetBrains Mono';">Connect</h5>
+      <ul class="space-y-2.5">
+        <li><a class="text-white/70 hover:text-gold transition-all block text-sm" href="#">Facebook</a></li>
+        <li><a class="text-white/70 hover:text-gold transition-all block text-sm" href="#">Instagram</a></li>
+        <li><a class="text-white/70 hover:text-gold transition-all block text-sm" href="#">WhatsApp</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="text-gold uppercase tracking-widest mb-5 font-bold text-xs" style="font-family:'JetBrains Mono';">Contact Us</h5>
+      <p class="text-white/70 mb-3 flex items-start gap-2 text-sm"><span class="material-symbols-outlined text-sm mt-0.5">location_on</span>Bweyogerere, Kampala</p>
+      <p class="text-white/70 mb-3 flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-sm">phone</span>+256 414 123 456</p>
+      <p class="text-white/70 flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-sm">mail</span>kampalaislamic@gmail.com</p>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 relative z-10">
+    <div class="max-w-[1280px] mx-auto px-gutter flex flex-col md:flex-row justify-between items-center text-white/50 text-xs gap-4">
+      <span>© 2026 Kampala Islamic Secondary School. All Rights Reserved.</span>
+      <div class="flex gap-8"><a class="hover:text-white" href="#">Privacy Policy</a><a class="hover:text-white" href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll',()=>{
+    const c=document.getElementById('nav-container');
+    if(window.scrollY>60){c.classList.remove('h-20');c.classList.add('h-14');}
+    else{c.classList.add('h-20');c.classList.remove('h-14');}
+  });
+  function sendMessage(btn){
+    btn.innerHTML='<span class="material-symbols-outlined">check_circle</span> Message Sent! JazakAllahu Khairan.';
+    btn.style.background='#2d6b4a';
+    btn.disabled=true;
+  }
+</script>
+</body>
+</html>
