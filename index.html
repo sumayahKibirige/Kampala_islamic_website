@@ -4,71 +4,24 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Kampala Islamic Secondary School | Always Aim Higher</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<meta name="description" content="Kampala Islamic Secondary School (KISS), Bweyogerere: O-Level and A-Level, day and boarding, combining the national curriculum with Islamic education since 2007."/>
+<meta name="theme-color" content="#1a4731"/>
+<link rel="icon" type="image/png" href="resources/favicon.png"/>
+<link rel="apple-touch-icon" href="resources/apple-touch-icon.png"/>
+<!-- Link previews (WhatsApp, Facebook, X). og:image must be a full https:// address:
+     replace SITE_URL below with the live site address, e.g. https://kiss.netlify.app -->
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Kampala Islamic Secondary School"/>
+<meta property="og:title" content="Kampala Islamic Secondary School | Always Aim Higher"/>
+<meta property="og:description" content="O-Level and A-Level, day and boarding, in Bweyogerere. Islamic and secular education since 2007."/>
+<meta property="og:image" content="SITE_URL/resources/share.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<!-- Built from tailwind.config.js — see that file for how to rebuild after changing classes -->
+<link rel="stylesheet" href="resources/site.css"/>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Literata:ital,wght@0,600;0,700;1,600&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        colors: {
-          "primary": "#1a4731",
-          "primary-dark": "#0d2b1d",
-          "primary-light": "#2d6b4a",
-          "gold": "#c9a84c",
-          "gold-light": "#e8c96a",
-          "navy": "#0f2744",
-          "navy-mid": "#1b3d6b",
-          "on-primary": "#ffffff",
-          "surface": "#f7f9f7",
-          "surface-container": "#eef2ee",
-          "surface-container-low": "#f2f6f2",
-          "surface-container-lowest": "#ffffff",
-          "on-surface": "#0d1f12",
-          "on-surface-variant": "#3d4f42",
-          "outline": "#6e7e73",
-          "outline-variant": "#bfcfc3",
-          "primary-fixed": "#e8c96a",
-          "primary-fixed-dim": "#c9a84c",
-          "on-primary-fixed": "#1a1200",
-          "primary-container": "#2d6b4a",
-          "on-primary-container": "#ffffff",
-          "error": "#ba1a1a"
-        },
-        borderRadius: {
-          "DEFAULT": "0.125rem",
-          "lg": "0.25rem",
-          "xl": "0.5rem",
-          "full": "0.75rem"
-        },
-        spacing: {
-          "gutter": "24px",
-        },
-        fontFamily: {
-          "headline-lg": ["Literata"],
-          "headline-md": ["Literata"],
-          "display-lg": ["Literata"],
-          "body-lg": ["Hanken Grotesk"],
-          "body-md": ["Hanken Grotesk"],
-          "label-md": ["Hanken Grotesk"],
-          "label-sm": ["Hanken Grotesk"],
-          "arabic": ["Amiri"],
-        },
-        fontSize: {
-          "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-          "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
-          "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
-          "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
-          "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
-          "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-          "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
-          "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
-        }
-      }
-    }
-  }
-</script>
 <style>
   .material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24; display: inline-block; line-height: 1; }
 
@@ -94,6 +47,10 @@
   /* Hero video (optional — shows only if resources/hero.mp4 exists) */
   #hero-video { opacity: 0; transition: opacity 1.2s ease; }
   #hero-video.ready { opacity: 1; }
+  /* Never show the browser's own play overlay on the background video */
+  #hero-video::-webkit-media-controls,
+  #hero-video::-webkit-media-controls-start-playback-button,
+  #hero-video::-webkit-media-controls-overlay-play-button { display: none !important; -webkit-appearance: none; }
 
   /* About */
   .timeline-line { position: relative; }
@@ -141,7 +98,6 @@
 
   /* Admissions & contact forms */
   input:focus, select:focus, textarea:focus { outline: none; border-color: #c9a84c !important; box-shadow: 0 0 0 3px rgba(201,168,76,0.15); }
-  .fee-card:hover { transform: translateY(-6px); }
   @keyframes pulse-gold { 0%,100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.4); } 50% { box-shadow: 0 0 0 12px rgba(201,168,76,0); } }
   .pulse-gold { animation: pulse-gold 2.5s infinite; }
   .contact-card { transition: transform 0.3s, box-shadow 0.3s; }
@@ -193,7 +149,7 @@
     <div class="hidden lg:flex items-center gap-7">
       <a class="nav-link font-label-md text-label-md uppercase tracking-wider" href="#home">Home</a>
       <a class="nav-link font-label-md text-label-md uppercase tracking-wider" href="#about">About</a>
-      <a class="nav-link font-label-md text-label-md uppercase tracking-wider" href="#videos">Videos</a>
+      <a class="nav-link font-label-md text-label-md uppercase tracking-wider" href="#videos">Gallery</a>
       <a class="nav-link font-label-md text-label-md uppercase tracking-wider" href="#tour" hidden>Tour</a>
       <a class="nav-link font-label-md text-label-md uppercase tracking-wider" href="#events" hidden>Events</a>
       <a class="nav-link font-label-md text-label-md uppercase tracking-wider" href="#admissions">Admissions</a>
@@ -228,7 +184,8 @@
 <!-- ===== HERO SECTION ===== -->
 <header class="relative min-h-[88vh] flex items-end pt-20 overflow-hidden hero-gradient">
   <!-- Background video: drop a short, muted clip at resources/hero.mp4 and it fades in automatically -->
-  <video id="hero-video" class="absolute inset-0 w-full h-full object-cover pointer-events-none" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+  <video id="hero-video" class="absolute inset-0 w-full h-full object-cover pointer-events-none" autoplay muted loop playsinline disablepictureinpicture disableremoteplayback preload="auto" aria-hidden="true">
+    <source src="resources/hero-mobile.mp4" type="video/mp4" media="(max-width: 767px)">
     <source src="resources/hero.mp4" type="video/mp4">
   </video>
   <!-- Tint only where the text sits (left and bottom), so the video stays visible -->
@@ -269,20 +226,20 @@
   <div class="bg-surface border-b border-outline-variant/40">
     <div class="max-w-[1280px] mx-auto px-gutter py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
       <div class="text-center">
-        <div class="font-display-lg text-primary text-3xl font-bold">1,000+</div>
-        <div class="font-label-sm text-on-surface-variant text-sm">Students Enrolled</div>
+        <div class="font-display-lg text-primary text-2xl md:text-3xl font-bold">S.1 – S.6</div>
+        <div class="font-label-sm text-on-surface-variant text-sm">O-Level &amp; A-Level</div>
       </div>
       <div class="text-center">
-        <div class="font-display-lg text-primary text-3xl font-bold">80+</div>
-        <div class="font-label-sm text-on-surface-variant text-sm">Qualified Teachers</div>
+        <div class="font-display-lg text-primary text-2xl md:text-3xl font-bold">Day &amp; Boarding</div>
+        <div class="font-label-sm text-on-surface-variant text-sm">For Boys and Girls</div>
       </div>
       <div class="text-center">
-        <div class="font-display-lg text-primary text-3xl font-bold">30+</div>
-        <div class="font-label-sm text-on-surface-variant text-sm">Years of Excellence</div>
+        <div class="font-display-lg text-primary text-2xl md:text-3xl font-bold">Islamic + Secular</div>
+        <div class="font-label-sm text-on-surface-variant text-sm">One Integrated Education</div>
       </div>
       <div class="text-center">
-        <div class="font-display-lg text-primary text-3xl font-bold">95%</div>
-        <div class="font-label-sm text-on-surface-variant text-sm">UCE Pass Rate</div>
+        <div class="font-display-lg text-primary text-2xl md:text-3xl font-bold">Since 2007</div>
+        <div class="font-label-sm text-on-surface-variant text-sm">UNEB Centre since 2010</div>
       </div>
     </div>
   </div>
@@ -316,11 +273,6 @@
         <p>
           "Every student who walks through our gates carries the potential to become a leader of character, faith, and intellect. Our dedicated staff work tirelessly to ensure that each child is seen, nurtured, and empowered to reach their fullest potential — in the classroom and beyond."
         </p>
-      </div>
-      <div class="mt-8 flex flex-wrap gap-4">
-        <button class="bg-primary text-white px-6 py-3 rounded-lg font-label-md uppercase tracking-wider hover:bg-primary-light transition-all flex items-center gap-2 shadow-md">
-          Read Full Message <span class="material-symbols-outlined text-sm">arrow_forward</span>
-        </button>
       </div>
     </div>
   </div>
@@ -397,36 +349,16 @@
     </div>
     <div class="relative">
       <!-- connecting line: vertical on phones, horizontal on wider screens -->
-      <div class="absolute left-6 top-6 bottom-6 w-0.5 md:left-[10%] md:right-[10%] md:top-6 md:bottom-auto md:w-auto md:h-0.5" style="background: linear-gradient(90deg, #c9a84c, #1a4731);" aria-hidden="true"></div>
-    <ol class="relative grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-6">
+      <div class="absolute left-6 top-6 bottom-6 w-0.5 md:left-[16.67%] md:right-[16.67%] md:top-6 md:bottom-auto md:w-auto md:h-0.5" style="background: linear-gradient(90deg, #c9a84c, #1a4731);" aria-hidden="true"></div>
+    <ol class="relative grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
       <li class="relative grid grid-cols-[auto_1fr] md:grid-cols-1 gap-x-4 md:gap-y-3 md:text-center">
         <div class="relative z-10 w-12 h-12 md:mx-auto rounded-[9999px] border-4 bg-white border-gold flex items-center justify-center shadow-md">
           <span class="material-symbols-outlined text-xl text-primary">flag</span>
         </div>
         <div>
-          <div class="font-display-lg text-gold font-bold text-2xl leading-none mb-1">1990</div>
+          <div class="font-display-lg text-gold font-bold text-2xl leading-none mb-1">2007</div>
           <h4 class="font-headline-md text-primary font-bold text-base mb-1">Founded</h4>
-          <p class="text-on-surface-variant text-sm leading-relaxed">Opened in Bweyogerere with 3 classrooms and 87 students.</p>
-        </div>
-      </li>
-      <li class="relative grid grid-cols-[auto_1fr] md:grid-cols-1 gap-x-4 md:gap-y-3 md:text-center">
-        <div class="relative z-10 w-12 h-12 md:mx-auto rounded-[9999px] border-4 bg-white border-gold flex items-center justify-center shadow-md">
-          <span class="material-symbols-outlined text-xl text-primary">school</span>
-        </div>
-        <div>
-          <div class="font-display-lg text-gold font-bold text-2xl leading-none mb-1">1998</div>
-          <h4 class="font-headline-md text-primary font-bold text-base mb-1">First UCE class</h4>
-          <p class="text-on-surface-variant text-sm leading-relaxed">94% passed, with 12 students in Division One.</p>
-        </div>
-      </li>
-      <li class="relative grid grid-cols-[auto_1fr] md:grid-cols-1 gap-x-4 md:gap-y-3 md:text-center">
-        <div class="relative z-10 w-12 h-12 md:mx-auto rounded-[9999px] border-4 bg-white border-gold flex items-center justify-center shadow-md">
-          <span class="material-symbols-outlined text-xl text-primary">trending_up</span>
-        </div>
-        <div>
-          <div class="font-display-lg text-gold font-bold text-2xl leading-none mb-1">2005</div>
-          <h4 class="font-headline-md text-primary font-bold text-base mb-1">A-Level added</h4>
-          <p class="text-on-surface-variant text-sm leading-relaxed">Sciences, arts and business streams for S.5 and S.6.</p>
+          <p class="text-on-surface-variant text-sm leading-relaxed">Kampala Islamic Secondary School opens its doors in Bweyogerere.</p>
         </div>
       </li>
       <li class="relative grid grid-cols-[auto_1fr] md:grid-cols-1 gap-x-4 md:gap-y-3 md:text-center">
@@ -434,9 +366,9 @@
           <span class="material-symbols-outlined text-xl text-primary">science</span>
         </div>
         <div>
-          <div class="font-display-lg text-gold font-bold text-2xl leading-none mb-1">2015</div>
-          <h4 class="font-headline-md text-primary font-bold text-base mb-1">Labs &amp; ICT</h4>
-          <p class="text-on-surface-variant text-sm leading-relaxed">New science labs, a 60-seat computer lab and a library.</p>
+          <div class="font-display-lg text-gold font-bold text-2xl leading-none mb-1">2010</div>
+          <h4 class="font-headline-md text-primary font-bold text-base mb-1">Our own UNEB centre</h4>
+          <p class="text-on-surface-variant text-sm leading-relaxed">Science laboratories completed and a UNEB centre number awarded, so candidates sit their national exams at KISS.</p>
         </div>
       </li>
       <li class="relative grid grid-cols-[auto_1fr] md:grid-cols-1 gap-x-4 md:gap-y-3 md:text-center">
@@ -445,8 +377,8 @@
         </div>
         <div>
           <div class="font-display-lg text-gold font-bold text-2xl leading-none mb-1">Today</div>
-          <h4 class="font-headline-md text-primary font-bold text-base mb-1">1,200+ students</h4>
-          <p class="text-on-surface-variant text-sm leading-relaxed">80+ teachers, a new mosque and a Hifz programme.</p>
+          <h4 class="font-headline-md text-primary font-bold text-base mb-1">Still growing</h4>
+          <p class="text-on-surface-variant text-sm leading-relaxed">A new mosque and a Hifz programme.</p>
         </div>
       </li>
     </ol>
@@ -978,15 +910,15 @@
           <h4 class="text-primary font-bold leading-tight" style="font-family:Literata;font-size:18px;">Fill &amp; Attach</h4>
           <span class="material-symbols-outlined text-primary/40 ml-auto">edit_note</span>
         </div>
-        <p class="text-on-surface-variant text-sm leading-relaxed">Attach certified PLE or UCE results, a birth certificate and 2 passport photos.</p>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Attach certified PLE or UCE results, a birth certificate and recent passport photos.</p>
       </li>
       <li class="bg-white rounded-xl p-5 border border-outline-variant/30 shadow-sm hover:shadow-lg transition-shadow">
         <div class="flex items-center gap-3 mb-3">
           <span class="w-9 h-9 rounded-[9999px] border-2 border-gold text-primary bg-white flex items-center justify-center font-bold shrink-0" style="font-family:Literata;">3</span>
-          <h4 class="text-primary font-bold leading-tight" style="font-family:Literata;font-size:18px;">Pay the Fee</h4>
-          <span class="material-symbols-outlined text-primary/40 ml-auto">payments</span>
+          <h4 class="text-primary font-bold leading-tight" style="font-family:Literata;font-size:18px;">Hand It In</h4>
+          <span class="material-symbols-outlined text-primary/40 ml-auto">assignment_turned_in</span>
         </div>
-        <p class="text-on-surface-variant text-sm leading-relaxed">UGX 20,000, non-refundable, by MTN/Airtel Mobile Money or at the bursar’s office.</p>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Return the completed form to the admissions office, where the application fee is paid.</p>
       </li>
       <li class="bg-white rounded-xl p-5 border border-outline-variant/30 shadow-sm hover:shadow-lg transition-shadow">
         <div class="flex items-center gap-3 mb-3">
@@ -994,9 +926,18 @@
           <h4 class="text-primary font-bold leading-tight" style="font-family:Literata;font-size:18px;">Interview &amp; Enrol</h4>
           <span class="material-symbols-outlined text-primary/40 ml-auto">how_to_reg</span>
         </div>
-        <p class="text-on-surface-variant text-sm leading-relaxed">Attend the entrance interview. Admission letters go out within 5 working days.</p>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Attend the entrance interview. Successful students then receive their admission letter.</p>
       </li>
     </ol>
+    <div class="mt-10 flex items-center gap-4 rounded-xl p-5 md:p-6 shadow-md" style="background:linear-gradient(90deg,#c9a84c,#e8c96a);">
+      <div class="w-12 h-12 rounded-[9999px] bg-white/30 flex items-center justify-center shrink-0">
+        <span class="material-symbols-outlined text-2xl text-on-primary-fixed">bed</span>
+      </div>
+      <div>
+        <p class="text-on-primary-fixed font-bold text-lg leading-tight" style="font-family:Literata;">Free mattress on admission</p>
+        <p class="text-on-primary-fixed/80 text-sm mt-1">Every new student receives a free mattress when they join KISS.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1028,17 +969,17 @@
             <span class="text-gold mt-1 flex-shrink-0">✓</span>
             <p class="text-on-surface-variant text-sm">PLE (Primary Leaving Examination) certificate or results slip</p>
           </div>
-          <div class="flex items-start gap-3">
+          <!-- <div class="flex items-start gap-3">
             <span class="text-gold mt-1 flex-shrink-0">✓</span>
-            <p class="text-on-surface-variant text-sm">Minimum aggregate of <strong class="text-primary">28 or below</strong> (lower is better in Uganda's system)</p>
-          </div>
+            <p class="text-on-surface-variant text-sm">A good PLE pass, especially in English and Mathematics</p>
+          </div> -->
           <div class="flex items-start gap-3">
             <span class="text-gold mt-1 flex-shrink-0">✓</span>
             <p class="text-on-surface-variant text-sm">Certified copy of birth certificate</p>
           </div>
           <div class="flex items-start gap-3">
             <span class="text-gold mt-1 flex-shrink-0">✓</span>
-            <p class="text-on-surface-variant text-sm">2 recent passport-size photographs</p>
+            <p class="text-on-surface-variant text-sm">Recent passport-size photographs</p>
           </div>
           <div class="flex items-start gap-3">
             <span class="text-gold mt-1 flex-shrink-0">✓</span>
@@ -1066,167 +1007,26 @@
           </div>
           <div class="flex items-start gap-3">
             <span class="text-gold mt-1 flex-shrink-0">✓</span>
-            <p class="text-on-surface-variant text-sm">Minimum of <strong class="text-primary">6 passes</strong> including credits in chosen A-Level subjects</p>
+            <p class="text-on-surface-variant text-sm">Good credits in your chosen A-Level subjects</p>
           </div>
+          <!-- <div class="flex items-start gap-3">
+            <span class="text-gold mt-1 flex-shrink-0">✓</span>
+            <p class="text-on-surface-variant text-sm">A credit in English Language</p>
+          </div> -->
           <div class="flex items-start gap-3">
             <span class="text-gold mt-1 flex-shrink-0">✓</span>
-            <p class="text-on-surface-variant text-sm">Credit (grade 4 or above) in English Language</p>
+            <p class="text-on-surface-variant text-sm">Recent passport-size photographs and a birth certificate copy</p>
           </div>
-          <div class="flex items-start gap-3">
-            <span class="text-gold mt-1 flex-shrink-0">✓</span>
-            <p class="text-on-surface-variant text-sm">2 recent passport-size photographs + birth certificate copy</p>
-          </div>
-          <div class="flex items-start gap-3">
+          <!-- <div class="flex items-start gap-3">
             <span class="text-gold mt-1 flex-shrink-0">✓</span>
             <p class="text-on-surface-variant text-sm">Subject combination interview with Head of Academics</p>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FEE STRUCTURE -->
-<section class="py-12 md:py-14 bg-surface">
-  <div class="max-w-[1280px] mx-auto px-gutter">
-    <div class="mb-10 max-w-3xl">
-      <span class="text-gold font-bold uppercase tracking-[0.12em] text-sm block mb-3">Transparent Pricing</span>
-      <h2 class="text-primary mb-3" style="font-family:Literata;font-size:32px;font-weight:600;">School Fees Structure</h2>
-      <div class="gold-divider w-24 mx-auto mt-4"></div>
-      <p class="text-on-surface-variant max-w-xl mt-4">Fees are payable each term. Bursaries are available for academically gifted students from low-income families.</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Day -->
-      <div class="fee-card bg-white rounded-xl border border-outline-variant/20 shadow-sm transition-all duration-300 overflow-hidden">
-        <div class="p-6 border-b border-outline-variant/20">
-          <p class="text-outline text-xs uppercase tracking-widest font-bold mb-2">Day Scholar</p>
-          <div class="flex items-end gap-2 mb-1">
-            <span class="text-3xl font-bold text-primary" style="font-family:Literata;">UGX 450,000</span>
-          </div>
-          <p class="text-on-surface-variant text-sm">per term</p>
-        </div>
-        <div class="p-6 space-y-3">
-          <div class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-sm text-on-surface-variant">Tuition fees</span></div>
-          <div class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-sm text-on-surface-variant">Islamic Studies classes</span></div>
-          <div class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-sm text-on-surface-variant">Library & ICT access</span></div>
-          <div class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-sm text-on-surface-variant">Sports & activities</span></div>
-          <div class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-sm text-on-surface-variant">Meals included</span></div>
-          <div class="flex items-center gap-3 opacity-40"><span>✗</span><span class="text-sm text-on-surface-variant">Accommodation not included</span></div>
-        </div>
-        <!-- <div class="px-6 pb-6">
-          <button class="w-full border-2 border-primary text-primary py-3 rounded-lg font-bold uppercase tracking-wider hover:bg-primary hover:text-white transition-all text-sm">Apply as Day Scholar</button>
-        </div> -->
-      </div>
-      <!-- Boarding — Featured -->
-      <div class="fee-card rounded-xl shadow-2xl transition-all duration-300 overflow-hidden transform md:-translate-y-4" style="background:linear-gradient(145deg,#1a4731,#0f2744);">
-        <div class="p-1 text-center" style="background:linear-gradient(90deg,#c9a84c,#e8c96a,#c9a84c);">
-          <p class="text-on-primary-fixed text-xs font-bold uppercase tracking-widest py-1">Most Popular</p>
-        </div>
-        <div class="p-6 border-b border-white/10">
-          <p class="text-gold/70 text-xs uppercase tracking-widest font-bold mb-2">Full Boarding</p>
-          <div class="flex items-end gap-2 mb-1">
-            <span class="text-3xl font-bold text-gold" style="font-family:Literata;">UGX 850,000</span>
-          </div>
-          <p class="text-white/50 text-sm">per term</p>
-        </div>
-        <div class="p-6 space-y-3">
-          <div class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-sm text-white/80">All Day Scholar benefits</span></div>
-          <div class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-sm text-white/80">3 halal meals daily</span></div>
-          <div class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-sm text-white/80">Dormitory accommodation</span></div>
-          <div class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-sm text-white/80">Evening prep supervision</span></div>
-          <!-- <div class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-sm text-white/80">Fajr & Isha congregation</span></div> -->
-          <div class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-sm text-white/80">Weekend Islamic programme</span></div>
-        </div>
-        <!-- <div class="px-6 pb-6">
-          <button class="w-full bg-gold text-on-primary-fixed py-3 rounded-lg font-bold uppercase tracking-wider hover:bg-gold-light transition-all text-sm shadow-lg">Apply as Boarder</button>
-        </div> -->
-      </div>
-      <!-- A-Level -->
-      <div class="fee-card bg-white rounded-xl border border-outline-variant/20 shadow-sm transition-all duration-300 overflow-hidden">
-        <div class="p-6 border-b border-outline-variant/20">
-          <p class="text-outline text-xs uppercase tracking-widest font-bold mb-2">A-Level (S5–S6)</p>
-          <div class="flex items-end gap-2 mb-1">
-            <span class="text-3xl font-bold text-primary" style="font-family:Literata;">UGX 600,000</span>
-          </div>
-          <p class="text-on-surface-variant text-sm">per term (day)</p>
-        </div>
-        <div class="p-6 space-y-3">
-          <div class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-sm text-on-surface-variant">All O-Level benefits</span></div>
-          <div class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-sm text-on-surface-variant">Specialist subject teachers</span></div>
-          <div class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-sm text-on-surface-variant">University guidance & UCAS</span></div>
-          <div class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-sm text-on-surface-variant">Research & practical sessions</span></div>
-          <!-- <div class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-sm text-on-surface-variant">Mock examinations included</span></div> -->
-          <div class="flex items-center gap-3 opacity-40"><span>✗</span><span class="text-sm text-on-surface-variant">Boarding optional (+UGX 400k)</span></div>
-
-        </div>
-        <!-- <div class="px-6 pb-6">
-          <button class="w-full border-2 border-primary text-primary py-3 rounded-lg font-bold uppercase tracking-wider hover:bg-primary hover:text-white transition-all text-sm">Apply for A-Level</button>
-        </div> -->
-      </div>
-    </div>
-    <p class="text-center text-on-surface-variant text-sm mt-8">* Fees exclude UNEB examination fees, uniform, and stationery. Bursary applications open January each year.</p>
-  </div>
-</section>
-
-<!-- ONLINE ENQUIRY FORM -->
-<section class="py-12 md:py-14 relative overflow-hidden" style="background:linear-gradient(135deg,#1a4731 0%,#0d2b1d 40%,#0f2744 100%);">
-  <div class="absolute inset-0 hex-pattern pointer-events-none opacity-50"></div>
-  <div class="max-w-[860px] mx-auto px-gutter relative z-10">
-    <div class="mb-10 max-w-3xl">
-      <span class="text-gold font-bold uppercase tracking-[0.12em] text-sm block mb-3">Get In Touch</span>
-      <h2 class="text-white mb-3" style="font-family:Literata;font-size:32px;font-weight:600;">Send an Enquiry</h2>
-      <p class="text-white/60">Fill in the form and our admissions team will contact you within 24 hours, In sha Allah.</p>
-    </div>
-    <div class="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-8 md:p-12">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <label class="block text-gold text-xs uppercase tracking-widest font-bold mb-2">Parent / Guardian Name *</label>
-          <input id="parent_name" type="text" placeholder="e.g. Hajji Ahmed Kateregga" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 transition-all" style="font-family:'Hanken Grotesk';">
-        </div>
-        <div>
-          <label class="block text-gold text-xs uppercase tracking-widest font-bold mb-2">Student's Name *</label>
-          <input id="student_name" type="text" placeholder="e.g. Maryam Kateregga" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 transition-all" style="font-family:'Hanken Grotesk';">
-        </div>
-        <div>
-          <label class="block text-gold text-xs uppercase tracking-widest font-bold mb-2">Phone Number *</label>
-          <input id="phone" type="tel" placeholder="+256 7XX XXX XXX" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 transition-all" style="font-family:'Hanken Grotesk';">
-        </div>
-        <div>
-          <label class="block text-gold text-xs uppercase tracking-widest font-bold mb-2">Email Address</label>
-          <input id="email" type="email" placeholder="your@email.com" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 transition-all" style="font-family:'Hanken Grotesk';">
-        </div>
-        <div>
-          <label class="block text-gold text-xs uppercase tracking-widest font-bold mb-2">Applying For *</label>
-          <select id="applying_for" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white transition-all" style="font-family:'Hanken Grotesk';">
-            <option value="" class="text-gray-800">Select class...</option>
-            <option value="s1" class="text-gray-800">Senior 1 (O-Level)</option>
-            <option value="s2" class="text-gray-800">Senior 2 (Transfer)</option>
-            <option value="s3" class="text-gray-800">Senior 3 (Transfer)</option>
-            <option value="s5" class="text-gray-800">Senior 5 (A-Level)</option>
-          </select>
-        </div>
-        <div>
-          <label class="block text-gold text-xs uppercase tracking-widest font-bold mb-2">Boarding or Day?</label>
-          <select id="boarding_pref" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white transition-all" style="font-family:'Hanken Grotesk';">
-            <option value="" class="text-gray-800">Select preference...</option>
-            <option value="boarding" class="text-gray-800">Full Boarding</option>
-            <option value="day" class="text-gray-800">Day Scholar</option>
-            <option value="undecided" class="text-gray-800">Undecided</option>
-          </select>
-        </div>
-        <div class="md:col-span-2">
-          <label class="block text-gold text-xs uppercase tracking-widest font-bold mb-2">Additional Message</label>
-          <textarea id="message" rows="4" placeholder="Any questions about bursaries, subject combinations, or the school in general..." class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 transition-all resize-none" style="font-family:'Hanken Grotesk';"></textarea>
-        </div>
-      </div>
-      <button id="enquiry-btn" onclick="handleSubmit()" class="mt-8 w-full bg-gold text-on-primary-fixed py-4 rounded-lg font-bold uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-3 shadow-lg text-sm hover:-translate-y-1">
-        <span class="material-symbols-outlined">send</span> Submit Enquiry
-      </button>
-      <p id="enquiry-error" class="text-red-400 text-center text-xs mt-3 hidden">Please fill in all required fields marked with *</p>
-      <p class="text-white/40 text-center text-xs mt-4">Your information is kept confidential and will only be used for admissions purposes.</p>
-    </div>
-  </div>
-</section>
 
 </div>
 
@@ -1264,8 +1064,8 @@
         </div>
         <h4 class="text-primary font-bold mb-2" style="font-family:Literata;font-size:18px;">Call Us</h4>
         <p class="text-on-surface-variant text-sm mb-3">Mon–Fri, 7:30am – 5pm</p>
-        <a href="tel:+256414123456" class="text-primary font-bold text-sm hover:text-primary-light transition-colors block">+256 414 123 456</a>
-        <a href="tel:+256772123456" class="text-primary font-bold text-sm hover:text-primary-light transition-colors block mt-1">+256 772 123 456</a>
+        <a href="tel:+256702414517" class="text-primary font-bold text-sm hover:text-primary-light transition-colors block">+256 702 414 517</a>
+        <a href="tel:+256700994663" class="text-primary font-bold text-sm hover:text-primary-light transition-colors block mt-1">+256 700 994 663</a>
       </div>
       <!-- Email -->
       <div class="contact-card bg-white rounded-xl p-7 border border-outline-variant/20 shadow-sm text-center">
@@ -1275,7 +1075,7 @@
         <h4 class="text-primary font-bold mb-2" style="font-family:Literata;font-size:18px;">Email Us</h4>
         <p class="text-on-surface-variant text-sm mb-3">We reply within 24 hours</p>
         <a href="mailto:kampalaislamic@gmail.com" class="text-primary font-bold text-sm hover:text-primary-light transition-colors block">kampalaislamic@gmail.com</a>
-        <a href="mailto:admissions@kiss.ac.ug" class="text-primary font-bold text-sm hover:text-primary-light transition-colors block mt-1">admissions@kiss.ac.ug</a>
+        <!-- <a href="mailto:admissions@kiss.ac.ug" class="text-primary font-bold text-sm hover:text-primary-light transition-colors block mt-1">admissions@kiss.ac.ug</a> -->
       </div>
       <!-- WhatsApp -->
       <div class="contact-card rounded-xl p-7 shadow-lg text-center whatsapp-btn cursor-pointer" onclick="window.open('https://wa.me/256704108584','_blank')">
@@ -1284,21 +1084,21 @@
         </div>
         <h4 class="text-white font-bold mb-2" style="font-family:Literata;font-size:18px;">WhatsApp</h4>
         <p class="text-white/80 text-sm mb-3">Quick replies, anytime</p>
-        <p class="text-white font-bold text-sm">+256 704 108 584</p>
+        <p class="text-white font-bold text-sm">+256 702 414 517</p>
         <p class="text-white/60 text-xs mt-1">Tap to open WhatsApp</p>
       </div>
     </div>
 
     <!-- MAIN GRID: Form + Info -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-      <!-- Contact Form — hidden: the admissions enquiry form handles messages. Remove `hidden` to restore. -->
-      <div class="lg:col-span-7" hidden>
+      <!-- Contact Form -->
+      <div class="lg:col-span-7">
         <div class="bg-white rounded-2xl border border-outline-variant/20 shadow-sm overflow-hidden">
-          <div class="p-8" style="background:linear-gradient(135deg,#1a4731,#0f2744);">
+          <div class="p-6" style="background:linear-gradient(135deg,#1a4731,#0f2744);">
             <h3 class="text-gold font-bold text-2xl mb-1" style="font-family:Literata;">Send Us a Message</h3>
             <p class="text-white/60 text-sm">Fill in your details and we'll get back to you as soon as possible.</p>
           </div>
-          <div class="p-8 space-y-5">
+          <div class="p-6 space-y-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div>
                 <label class="block text-primary text-xs uppercase tracking-widest font-bold mb-2">Your Name *</label>
@@ -1314,23 +1114,12 @@
               <input id="c_email" type="email" placeholder="your@email.com" class="w-full border border-outline-variant rounded-lg px-4 py-3 text-on-surface placeholder-outline transition-all" style="font-family:'Hanken Grotesk';">
             </div>
             <div>
-              <label class="block text-primary text-xs uppercase tracking-widest font-bold mb-2">Department</label>
-              <select id="c_department" class="w-full border border-outline-variant rounded-lg px-4 py-3 text-on-surface transition-all" style="font-family:'Hanken Grotesk';">
-                <option value="">Select department...</option>
-                <option>Admissions Office</option>
-                <option>Bursar / Fees</option>
-                <option>Principal's Office</option>
-                <option>Islamic Studies Department</option>
-                <option>General Enquiry</option>
-              </select>
-            </div>
-            <div>
               <label class="block text-primary text-xs uppercase tracking-widest font-bold mb-2">Subject *</label>
               <input id="c_subject" type="text" placeholder="What is your message about?" class="w-full border border-outline-variant rounded-lg px-4 py-3 text-on-surface placeholder-outline transition-all" style="font-family:'Hanken Grotesk';">
             </div>
             <div>
               <label class="block text-primary text-xs uppercase tracking-widest font-bold mb-2">Message *</label>
-              <textarea id="c_message" rows="5" placeholder="Type your message here..." class="w-full border border-outline-variant rounded-lg px-4 py-3 text-on-surface placeholder-outline transition-all resize-none" style="font-family:'Hanken Grotesk';"></textarea>
+              <textarea id="c_message" rows="4" placeholder="Type your message here..." class="w-full border border-outline-variant rounded-lg px-4 py-3 text-on-surface placeholder-outline transition-all resize-none" style="font-family:'Hanken Grotesk';"></textarea>
             </div>
             <button onclick="sendMessage(this)" class="w-full bg-primary text-white py-4 rounded-lg font-bold uppercase tracking-wider hover:bg-primary-light transition-all flex items-center justify-center gap-3 shadow-md hover:-translate-y-1 text-sm">
               <span class="material-symbols-outlined">send</span> Send Message
@@ -1341,7 +1130,7 @@
       </div>
 
       <!-- Sidebar Info -->
-      <div class="lg:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="lg:col-span-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 content-start">
         <!-- Office Hours -->
         <div class="bg-white rounded-xl border border-outline-variant/20 shadow-sm overflow-hidden">
           <div class="px-6 py-5 border-b border-outline-variant/20 flex items-center gap-3">
@@ -1359,7 +1148,7 @@
             </div>
             <div class="flex justify-between items-center py-2 px-2">
               <span class="text-on-surface-variant text-sm">Sunday</span>
-              <span class="text-outline text-sm">Closed (Jumu'ah prep)</span>
+              <span class="text-outline text-sm">Closed</span>
             </div>
             <div class="flex justify-between items-center py-2 px-2">
               <span class="text-on-surface-variant text-sm">Public Holidays</span>
@@ -1444,7 +1233,7 @@
         <p class="text-white/50 text-xs">Times adjusted seasonally. Fajr &amp; Isha for boarders only.</p>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="rounded-lg bg-white/10 p-4"><p class="text-white/70 text-sm">Dhuhr <span class="text-white/40">· Midday</span></p><p class="text-gold font-bold text-2xl mt-1" style="font-family:Literata;">1:15 PM</p></div>
+        <div class="rounded-lg bg-white/10 p-4"><p class="text-white/70 text-sm">Dhuhr <span class="text-white/40">·</span></p><p class="text-gold font-bold text-2xl mt-1" style="font-family:Literata;">1:15 PM</p></div>
         <div class="rounded-lg bg-white/10 p-4"><p class="text-white/70 text-sm">Asr <span class="text-white/40">· Afternoon</span></p><p class="text-gold font-bold text-2xl mt-1" style="font-family:Literata;">4:30 PM</p></div>
         <div class="rounded-lg bg-white/10 p-4"><p class="text-white/70 text-sm">Maghrib <span class="text-white/40">· Sunset</span></p><p class="text-gold font-bold text-2xl mt-1" style="font-family:Literata;">6:45 PM</p></div>
         <div class="rounded-lg bg-white/10 p-4"><p class="text-white/70 text-sm">Jumu'ah <span class="text-white/40">· Friday</span></p><p class="text-gold font-bold text-2xl mt-1" style="font-family:Literata;">12:30 PM</p></div>
@@ -1469,7 +1258,7 @@
           <div>
             <h4 class="text-white font-bold mb-1" style="font-family:Literata;">Principal's Office</h4>
             <p class="text-white/50 text-xs mb-2">Academic policy, disciplinary matters, parent meetings</p>
-            <a href="tel:+256414123456" class="text-gold text-sm font-bold hover:text-gold-light transition-colors">+256 414 123 456</a>
+            <a href="tel:+256702414517" class="text-gold text-sm font-bold hover:text-gold-light transition-colors">+256 702 414 517</a>
           </div>
         </div>
       </div>
@@ -1479,7 +1268,7 @@
           <div>
             <h4 class="text-white font-bold mb-1" style="font-family:Literata;">Admissions Office</h4>
             <p class="text-white/50 text-xs mb-2">New student applications, transfers, open days</p>
-            <a href="mailto:admissions@kiss.ac.ug" class="text-gold text-sm font-bold hover:text-gold-light transition-colors">admissions@kiss.ac.ug</a>
+            <!-- <a href="mailto:admissions@kiss.ac.ug" class="text-gold text-sm font-bold hover:text-gold-light transition-colors">admissions@kiss.ac.ug</a> -->
           </div>
         </div>
       </div>
@@ -1489,7 +1278,7 @@
           <div>
             <h4 class="text-white font-bold mb-1" style="font-family:Literata;">Bursar's Office</h4>
             <p class="text-white/50 text-xs mb-2">Fee payments, receipts, bursary applications</p>
-            <a href="mailto:bursar@kiss.ac.ug" class="text-gold text-sm font-bold hover:text-gold-light transition-colors">bursar@kiss.ac.ug</a>
+            <!-- <a href="mailto:bursar@kiss.ac.ug" class="text-gold text-sm font-bold hover:text-gold-light transition-colors">bursar@kiss.ac.ug</a> -->
           </div>
         </div>
       </div>
@@ -1509,7 +1298,7 @@
           <div>
             <h4 class="text-white font-bold mb-1" style="font-family:Literata;">Boarding / Matron</h4>
             <p class="text-white/50 text-xs mb-2">Dormitory welfare, health, boarding enquiries</p>
-            <a href="tel:+256772123458" class="text-gold text-sm font-bold hover:text-gold-light transition-colors">+256 772 123 458</a>
+            <a href="tel:+256702414517" class="text-gold text-sm font-bold hover:text-gold-light transition-colors">+256 702 414 517</a>
           </div>
         </div>
       </div>
@@ -1572,7 +1361,7 @@
         <span class="material-symbols-outlined text-sm mt-0.5">location_on</span> Bweyogerere, Kampala, Uganda
       </p>
       <p class="font-body-md text-white/70 mb-3 flex items-center gap-2 text-sm">
-        <span class="material-symbols-outlined text-sm">phone</span> +256 414 123 456
+        <span class="material-symbols-outlined text-sm">phone</span> +256 702 414 517
       </p>
       <p class="font-body-md text-white/70 flex items-center gap-2 text-sm">
         <span class="material-symbols-outlined text-sm">mail</span> kampalaislamic@gmail.com
@@ -1607,21 +1396,23 @@ const TIKTOK_PROFILE = 'https://www.tiktok.com/@kampalaislamicsecsch';
 //
 // YOUR OWN VIDEO FILES (best): put .mp4 files in resources/videos/ and list
 // them with `src`. Cards play a silent moving preview, and open full screen
-// with sound when tapped. `poster` (a cover image) is optional.
+// with sound when tapped. `poster` (a cover image) is optional, and so is
+// `preview`: a short, small, silent clip for the card, so phones don't download
+// the full video just by scrolling past (see resources/videos/previews/).
 //   { src: 'resources/videos/assembly.mp4', caption: 'Morning assembly' },
 //
 // TIKTOK LINKS: use the full link (with /video/ or /photo/ and a long number);
 // short vt.tiktok.com links won't work. Photo posts open on TikTok.
 //   { url: 'https://www.tiktok.com/@kampalaislamicsecsch/video/…', caption: '…' },
 const KISS_VIDEOS = [
-  { src: 'resources/videos/science-practicals.mp4', caption: 'Science practicals in the lab' },
-  { src: 'resources/videos/quran-competition.mp4', caption: 'Schools Quran Competition — semi-finals on Pearl FM' },
-  { src: 'resources/videos/exam-day.mp4', caption: 'Exam day: Maths & Chemistry' },
-  { src: 'resources/videos/football.mp4', caption: 'Football: KISS vs Bilal Islamic' },
+  { src: 'resources/videos/science-practicals.mp4', preview: 'resources/videos/previews/science-practicals.mp4', caption: 'Science practicals in the lab' },
+  { src: 'resources/videos/quran-competition.mp4', preview: 'resources/videos/previews/quran-competition.mp4', caption: 'Schools Quran Competition — semi-finals on Pearl FM' },
+  { src: 'resources/videos/exam-day.mp4', preview: 'resources/videos/previews/exam-day.mp4', caption: 'Exam day: Maths & Chemistry' },
+  { src: 'resources/videos/football.mp4', preview: 'resources/videos/previews/football.mp4', caption: 'Football: KISS vs Bilal Islamic' },
 ];
 
-// Free form-delivery key from web3forms.com (used by the admissions and contact forms).
-const WEB3FORMS_KEY = 'YOUR_ACCESS_KEY_HERE';
+// Free form-delivery key from web3forms.com (used by the contact form).
+const WEB3FORMS_KEY = '5f2aadee-01f1-4b4f-a4e9-fb05f491e979';
 // ════════════════════════════════════════════════════════════════════════
 
 // ── NAVBAR: shrink on scroll, highlight current section ──────────────────
@@ -1658,8 +1449,16 @@ mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => 
 // ── HERO VIDEO: fade in only if resources/hero.mp4 exists ────────────────
 const heroVideo = document.getElementById('hero-video');
 if (heroVideo) {
-  heroVideo.addEventListener('loadeddata', () => heroVideo.classList.add('ready'));
-  heroVideo.querySelector('source').addEventListener('error', () => heroVideo.remove());
+  // Fade in only once it is actually playing, so a blocked autoplay (e.g. iOS
+  // Low Power Mode) leaves the plain hero background instead of a play button
+  heroVideo.muted = true;
+  heroVideo.addEventListener('playing', () => heroVideo.classList.add('ready'));
+  heroVideo.querySelector('source:last-of-type').addEventListener('error', () => heroVideo.remove());
+  const tryPlay = () => heroVideo.play().catch(() => {});
+  tryPlay();
+  // Browsers that refuse autoplay usually allow it after the first interaction
+  ['touchstart', 'pointerdown', 'scroll', 'keydown'].forEach(ev =>
+    addEventListener(ev, tryPlay, { once: true, passive: true }));
 }
 
 // ── VIDEO REEL ───────────────────────────────────────────────────────────
@@ -1718,7 +1517,8 @@ function renderReel() {
     if (v.src) {
       // The clip itself is the cover: a silent preview that plays while the card is on screen
       const preview = document.createElement('video');
-      preview.src = v.src + '#t=0.5';
+      // A small silent clip for the card; the full video only loads when tapped
+      preview.src = v.preview || v.src + '#t=0.5';
       preview.muted = true;
       preview.loop = true;
       preview.playsInline = true;
@@ -2138,20 +1938,6 @@ async function submitForm({ btn, errorId, required, subject, fields, successText
   }
 }
 
-function handleSubmit() {
-  submitForm({
-    btn: document.getElementById('enquiry-btn'),
-    errorId: 'enquiry-error',
-    required: ['parent_name', 'student_name', 'phone', 'applying_for'],
-    subject: 'New School Enquiry — ' + document.getElementById('student_name').value,
-    fields: {
-      parent_name: 'parent_name', student_name: 'student_name', phone: 'phone', email: 'email',
-      applying_for: 'applying_for', boarding_preference: 'boarding_pref', message: 'message'
-    },
-    successText: "Enquiry Sent! We'll contact you soon, In sha Allah."
-  });
-}
-
 function sendMessage(btn) {
   submitForm({
     btn,
@@ -2160,7 +1946,7 @@ function sendMessage(btn) {
     subject: 'Website Message — ' + document.getElementById('c_subject').value,
     fields: {
       name: 'c_name', phone: 'c_phone', email: 'c_email',
-      department: 'c_department', topic: 'c_subject', message: 'c_message'
+      topic: 'c_subject', message: 'c_message'
     },
     successText: 'Message Sent! JazakAllahu Khairan.'
   });
