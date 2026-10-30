@@ -1466,7 +1466,7 @@ document.getElementById('tiktok-follow').href = TIKTOK_PROFILE;
 document.getElementById('footer-tiktok').href = TIKTOK_PROFILE;
 const handleMatch = TIKTOK_PROFILE.match(/@([\w.]+)/);
 if (handleMatch && !TIKTOK_PROFILE.includes('YOUR_SCHOOL_HANDLE')) {
-  document.getElementById('tiktok-handle').textContent = '@' + handleMatch[1];
+  document.getElementById('tiktok-handle').textContent = 'Check @' + handleMatch[1] + ' on TikTok for updates';
 }
 
 const SAMPLE_VIDEOS = [
